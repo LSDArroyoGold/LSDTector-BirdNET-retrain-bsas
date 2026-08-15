@@ -1,21 +1,27 @@
-# LSDTector — clasificador BirdNET v2
+# LSDTector: clasificador BirdNET v2
 
 Clasificador de BirdNET reentrenado para las 193 especies de aves de la
 región del campo de prueba (Buenos Aires, código eBird AR-B), listo para
 instalar en la Raspberry Pi del LSD-Tector 2.0.
 
-El modelo (`modelo/LSDTector_Classifier_v2.tflite`) reemplaza por completo
-la capa de decisión final de BirdNET (modo *Replace*): sólo reconoce estas
-193 especies locales, con mejor accuracy top-1 que el modelo global de
-BirdNET para esta región (63.6% → 85.7% global, 62.6% → 86.0% macro sobre
-el conjunto de validación). El detalle metodológico completo —por qué se
-reentrenó, qué falló en el primer intento, y por qué se terminó
-entrenando con regresión logística en vez del pipeline propio de
-BirdNET-Analyzer— está documentado en el informe del proyecto.
+El modelo (`modelo/LSDTector_Classifier_v2.tflite`) agrega, al catálogo
+global de BirdNET (modo *Append*), una capa de decisión nueva especializada
+en estas 193 especies locales, con mejor accuracy top-1 que el modelo
+global de BirdNET para esta región (63.6% a 85.7% global, 62.6% a 86.0%
+macro sobre el conjunto de validación). El catálogo original de BirdNET
+(unas 6522 especies de todo el mundo) queda intacto y disponible: el
+dispositivo no pierde la capacidad de reconocer una especie de paso o no
+contemplada en la lista local, y medido contra el mismo conjunto de
+validación, eso no cuesta nada de accuracy en las 193 especies locales.
+El detalle metodológico completo, por qué se reentrenó, qué falló en el
+primer intento, y por qué se terminó entrenando con regresión logística
+en vez del pipeline propio de BirdNET-Analyzer, está documentado en el
+informe del proyecto.
 
-El archivo `.tflite` es autocontenido: incluye tanto el extractor de
-características original de BirdNET (sin modificar) como la capa de
-decisión nueva, en un único grafo. No hace falta ningún otro archivo del
+El archivo `.tflite` es autocontenido: incluye el extractor de
+características original de BirdNET (sin modificar), la capa de decisión
+original (sin modificar), y la capa de decisión nueva, todo en un único
+grafo con 6715 salidas en total. No hace falta ningún otro archivo del
 BirdNET original.
 
 ## Instalación
@@ -23,8 +29,8 @@ BirdNET original.
 En la Raspberry Pi, con este repositorio ya clonado:
 
 ```bash
-git clone https://github.com/<ORG>/LSDTector-BirdNET-v2.git
-cd LSDTector-BirdNET-v2
+git clone https://github.com/LSDArroyoGold/LSDTector-BirdNET-retrain-bsas.git
+cd LSDTector-BirdNET-retrain-bsas
 bash instalar.sh
 ```
 
@@ -53,7 +59,7 @@ Si se sube una versión nueva del modelo a este repositorio, en la Pi
 alcanza con:
 
 ```bash
-cd LSDTector-BirdNET-v2
+cd LSDTector-BirdNET-retrain-bsas
 git pull
 ```
 
@@ -66,12 +72,12 @@ Este repo resuelve únicamente "correr el modelo reentrenado
 correctamente" en la Raspberry Pi. Deliberadamente no incluye la
 integración con el resto del pipeline del LSD-Tector (grabación
 automática programada, base de datos, envío a BirdWeather, manejo de
-energía, watchdog de batería, etc.) — eso se decide en una etapa
+energía, watchdog de batería, etc.); eso se decide en una etapa
 posterior, una vez confirmado que el modelo funciona bien sobre el
 dispositivo real.
 
 En particular: **BirdNET-Pi (Nachtzuster/BirdNET-Pi), tal como está hoy,
-no soporta clasificadores personalizados** — su selector de modelo tiene
+no soporta clasificadores personalizados**: su selector de modelo tiene
 una lista fija de 4 modelos posibles, sin forma de apuntar a un `.tflite`
 propio. Cuando llegue el momento de integrar esto con la interfaz web,
 la base de datos y BirdWeather, hay que decidir entre parchear
