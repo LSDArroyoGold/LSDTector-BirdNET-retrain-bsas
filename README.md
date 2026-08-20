@@ -1,5 +1,12 @@
 # LSDTector: clasificador BirdNET v2
 
+> ⚠️ **v2 tiene una falla de calibración confirmada en hardware real**:
+> dispara docenas de especies simultáneas con confianza >95% en el mismo
+> clip, incluyendo especies imposibles para la región (ver
+> [`INFORME_FALLAS_V2.md`](INFORME_FALLAS_V2.md) para evidencia, causa
+> probable y qué hace falta para la v3). Mientras tanto, tector2 corre con
+> el modelo original de BirdNET, no con este.
+
 Clasificador de BirdNET reentrenado para las 193 especies de aves de la
 región del campo de prueba (Buenos Aires, código eBird AR-B), listo para
 instalar en la Raspberry Pi del LSD-Tector 2.0.
