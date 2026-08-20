@@ -32,6 +32,8 @@ if __name__ == "__main__":
 
     from birdnet_analyzer import analyze
 
+    os.makedirs(RESULTADOS_DIR, exist_ok=True)
+
     print(f"Analizando '{audio_input}' con el clasificador LSD-Tector v2...")
     analyze(
         audio_input=audio_input,
