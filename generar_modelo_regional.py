@@ -12,52 +12,61 @@ No toca la capa de decision original de BirdNET (6522 especies globales):
 solo ajusta las 193 propias, que son las que este proyecto construye a
 mano con pesos (W, b) explicitos.
 
-IMPORTANTE sobre la fuente de datos: la API publica de eBird NO expone la
-estadistica de frecuencia por especie (eso es una funcion del sitio web,
-"bar chart", que requiere sesion logueada y esta sujeta a terminos de uso
-que restringen el uso comercial sin un acuerdo de licencia aparte). Para
-no atar el dispositivo -- ni un eventual producto comercial -- a esos
-terminos, ESTE SCRIPT NUNCA HACE NINGUN LLAMADO A EBIRD. En cambio, usa
-un archivo de bar chart ya descargado a mano (mismo formato que se usa
-desde el principio de este proyecto, ver ebird_ranking.csv/informe), que
-el equipo baja una vez por region desde su propia cuenta de eBird y
-versiona en este repositorio bajo frecuencias/<REGION>.txt. El
-dispositivo en el campo nunca se conecta a eBird: solo lee el archivo ya
-incluido que corresponda a su region.
+Fuente de datos, en orden de preferencia:
+
+1. Archivo de bar chart ya descargado a mano (mismo formato que se usa
+   desde el principio de este proyecto, ver ebird_ranking.csv/informe),
+   que el equipo baja una vez por region desde su propia cuenta de eBird
+   y versiona en este repositorio bajo frecuencias/<REGION>.txt. Sin
+   llamado de red a eBird (solo, como mucho, a este mismo repositorio via
+   raw.githubusercontent.com para traer el archivo si el dispositivo no
+   lo tiene local todavia).
+2. Si no existe ese archivo para la region Y se paso una API key de eBird
+   (--ebird-key, ver https://ebird.org/api/keygen), se usa la API publica
+   de eBird como respaldo: observaciones recientes (ultimos 30 dias, el
+   maximo que permite la API) de la region, contando en cuantos
+   checklists distintos aparece cada especie como proxy de frecuencia.
+
+   ADVERTENCIA para uso comercial: la API publica de eBird esta sujeta a
+   los terminos de uso de eBird/Cornell Lab, que restringen el uso
+   comercial sin un acuerdo de licencia aparte (ver el flujo de alta en
+   ebird.org/api/keygen, seccion "Solicite un acuerdo de licencia"). Este
+   camino se agrega a pedido explicito, para uso academico/de
+   investigacion actual del proyecto. Si el dispositivo llega a
+   comercializarse, revisar esto con eBird antes de seguir usando la API
+   en produccion -- el camino 1 (archivos ya descargados a mano) no tiene
+   esta restriccion porque nunca llama a la API en el dispositivo.
+
+Si ninguna de las dos fuentes esta disponible, el script sale sin generar
+nada y el dispositivo sigue con el modelo universal sin ajustar.
 
 Paso 1: reverse geocoding (lat, lon) -> codigo de region tipo ISO 3166-2
 (ej. "AR-B"), via Nominatim/OpenStreetMap (datos OpenStreetMap, licencia
 abierta, sin restriccion de uso comercial, gratis, sin API key).
 
-Paso 2: buscar frecuencias/<codigo>.txt en este repositorio. Si no existe
-(todavia no se descargo esa region a mano), el script sale sin generar
-nada y el dispositivo sigue con el modelo universal sin ajustar.
+Paso 2: buscar o traer la frecuencia por especie para esa region, segun
+el orden de fuentes de arriba.
 
-Paso 3: parsear el archivo de bar chart (formato de exportacion de
-eBird: una fila "Sample Size" con 48 valores quincenales, despues una
-fila por especie con nombre comun en ingles + 48 frecuencias
-quincenales). Se promedia a frecuencia anual por especie. El cruce
-nombre comun -> nombre cientifico se hace contra el archivo de labels
-global de BirdNET (ya instalado localmente con birdnet_analyzer, mismo
-formato "Nombre cientifico_Nombre comun" para las ~6522 especies), asi
-que tampoco hace falta ningun llamado de red para esto.
+Paso 3 (solo fuente 1, bar chart): el cruce nombre comun -> nombre
+cientifico se hace contra el archivo de labels global de BirdNET (ya
+instalado localmente con birdnet_analyzer, mismo formato "Nombre
+cientifico_Nombre comun" para las ~6522 especies), sin red.
 
 Paso 4: ajuste de bias, acotado:
     delta_b_especie = clip(ALPHA * (ln(frecuencia_especie) - ln(frecuencia_geomedia)), -DELTA_MAX, +DELTA_MAX)
 Centrado en la media geometrica de las 193 para que el ajuste, en
 promedio, ni infle ni desinfle el conjunto completo -- solo reordena
-relativo, que es la intencion. Especies de las 193 que no aparecen en el
-archivo de la region (o aparecen con frecuencia 0 en las 48 columnas)
-reciben un piso bajo, nunca cero ni -infinito.
+relativo, que es la intencion. Especies de las 193 sin frecuencia
+encontrada reciben un piso bajo, nunca cero ni -infinito.
 
 Paso 5: reexporta el .tflite en modo Append, mismo pipeline ya usado y
 validado (build_linear_classifier + save_linear_classifier), con
 b_ajustado en vez de b.
 
-Robustez: si CUALQUIER paso falla (geocoding, archivo de region
-faltante, parseo), el script aborta sin generar nada, dejando el modelo
-universal (sin ajuste regional) como esta -- nunca deja el dispositivo
-peor de lo que estaba, y nunca hace un solo request a eBird.
+Robustez: si CUALQUIER paso falla (geocoding, ambas fuentes sin datos,
+parseo), el script aborta sin generar nada, dejando el modelo universal
+(sin ajuste regional) como esta -- nunca deja el dispositivo peor de lo
+que estaba.
 """
 import argparse
 import json
@@ -79,9 +88,11 @@ OUT_DIR_DEFAULT = os.path.join(SCRIPT_DIR, "modelo_regional")
 ALPHA_DEFAULT = 0.6
 DELTA_MAX = 4.0          # tope del ajuste, en unidades de logit
 FLOOR_FRACCION = 0.05    # piso de frecuencia (respecto de la minima real observada) para
-                         # especies ausentes del archivo de la region, nunca cero
+                         # especies ausentes del archivo/observaciones, nunca cero
 TIMEOUT_RED = 20
 USER_AGENT = "LSDTector-BirdNET-retrain-bsas/1.0 (contacto: LSDArroyoGold)"
+VENTANA_DIAS_API = 30    # maximo que permite la API de eBird para /recent
+MAX_RESULTS_API = 10000
 
 
 def log(msg):
@@ -151,34 +162,72 @@ def parsear_barchart(path):
     return frecuencias
 
 
-def calcular_frecuencias(frec_por_nombre_comun, crosswalk, especies_193):
+def calcular_frecuencias_barchart(frec_por_nombre_comun, crosswalk, especies_193):
     """especies_193 son nombres cientificos (nuestras etiquetas). Se
     busca el nombre comun de cada una via el crosswalk, y su frecuencia
     en el archivo de la region. Piso para las que no matchean o dan 0."""
     frecuencias = {}
     no_encontradas = []
-    comun_por_especie = {}
     inv_crosswalk = {}
     for comun_lower, sci in crosswalk.items():
         inv_crosswalk.setdefault(sci, comun_lower)
 
     for esp in especies_193:
         comun = inv_crosswalk.get(esp)
-        comun_por_especie[esp] = comun
         val = frec_por_nombre_comun.get(comun) if comun else None
         frecuencias[esp] = val if val and val > 0 else None
         if frecuencias[esp] is None:
             no_encontradas.append(esp)
 
+    return aplicar_piso(frecuencias, especies_193), no_encontradas
+
+
+def aplicar_piso(frecuencias, especies_193):
     positivas = [v for v in frecuencias.values() if v is not None]
     piso = (min(positivas) * FLOOR_FRACCION) if positivas else 0.001
     piso = max(piso, 1e-5)
-
     for esp in especies_193:
-        if frecuencias[esp] is None:
+        if frecuencias.get(esp) is None:
             frecuencias[esp] = piso
+    return frecuencias
 
-    return frecuencias, no_encontradas, comun_por_especie
+
+def obtener_observaciones_recientes_ebird(region_code, api_key):
+    """Observaciones de especies en la region, ultimos VENTANA_DIAS_API
+    dias, via la API publica de eBird (requiere API key de aplicacion).
+    Ver advertencia de uso comercial en el docstring del modulo."""
+    url = (
+        f"https://api.ebird.org/v2/data/obs/{urllib.parse.quote(region_code)}/recent?"
+        + urllib.parse.urlencode({"back": VENTANA_DIAS_API, "cat": "species", "maxResults": MAX_RESULTS_API})
+    )
+    req = urllib.request.Request(url, headers={"X-eBirdApiToken": api_key, "User-Agent": USER_AGENT})
+    with urllib.request.urlopen(req, timeout=TIMEOUT_RED) as resp:
+        return json.load(resp)
+
+
+def calcular_frecuencias_api(observaciones, especies_193):
+    """Cuenta checklists distintos (subId) por especie (sciName) entre las
+    observaciones recientes, y arma la frecuencia relativa para las 193
+    especies locales. Piso para las que no aparecieron en la ventana."""
+    vistos_por_especie = {}
+    for obs in observaciones:
+        sci = obs.get("sciName")
+        sub_id = obs.get("subId")
+        if not sci:
+            continue
+        vistos_por_especie.setdefault(sci, set())
+        if sub_id:
+            vistos_por_especie[sci].add(sub_id)
+
+    frecuencias = {}
+    no_encontradas = []
+    for esp in especies_193:
+        n = len(vistos_por_especie.get(esp, ()))
+        frecuencias[esp] = float(n) if n > 0 else None
+        if frecuencias[esp] is None:
+            no_encontradas.append(esp)
+
+    return aplicar_piso(frecuencias, especies_193), no_encontradas
 
 
 def calcular_ajuste_bias(frecuencias, especies, alpha, delta_max):
@@ -201,6 +250,10 @@ def main():
                           "descargar frecuencias/<region>.txt si no existe localmente. Evita "
                           "tener que traer los archivos de TODAS las regiones al dispositivo, "
                           "solo la que corresponde. Sin llamados a eBird en ningun caso.")
+    ap.add_argument("--ebird-key", default=None,
+                     help="API key de eBird (https://ebird.org/api/keygen), solo como respaldo "
+                          "si no hay archivo de bar chart para la region. Ver advertencia de uso "
+                          "comercial en el docstring del modulo antes de usar esto en produccion.")
     ap.add_argument("--labels-file", default=None,
                      help="Archivo de labels global de BirdNET (SciName_CommonName). "
                           "Si se omite, se usa el que trae instalado birdnet_analyzer.")
@@ -241,31 +294,52 @@ def main():
             barchart_path = descargado_path
             log(f"Descargado OK: {barchart_path}")
         except Exception as e:
-            log(f"No se pudo descargar frecuencias para {region_code} ({e}). "
-                f"Nada que ajustar todavia para esta region. Abortando sin generar nada (no es un error).")
-            sys.exit(2)
+            log(f"No se pudo descargar frecuencias para {region_code} ({e}).")
+            barchart_path = None
 
-    if not os.path.exists(barchart_path):
-        log(f"No hay archivo de frecuencias para {region_code} ({barchart_path}). "
-            f"Nada que ajustar todavia para esta region. Abortando sin generar nada (no es un error).")
-        sys.exit(2)
-    log(f"Usando archivo de frecuencias: {barchart_path}")
+    fuente = None
+    frecuencias = None
+    no_encontradas = None
 
-    if args.labels_file:
-        labels_file = args.labels_file
+    if barchart_path and os.path.exists(barchart_path):
+        log(f"Usando archivo de frecuencias (bar chart): {barchart_path}")
+        if args.labels_file:
+            labels_file = args.labels_file
+        else:
+            import birdnet_analyzer.config as cfg
+            labels_file = cfg.BIRDNET_LABELS_FILE
+            if not os.path.isabs(labels_file):
+                import birdnet_analyzer
+                labels_file = os.path.join(os.path.dirname(birdnet_analyzer.__file__), labels_file)
+        log(f"Crosswalk de nombres desde: {labels_file}")
+        crosswalk = cargar_crosswalk_nombres(labels_file)
+
+        frec_por_nombre_comun = parsear_barchart(barchart_path)
+        log(f"{len(frec_por_nombre_comun)} especies parseadas del archivo de frecuencias")
+
+        frecuencias, no_encontradas = calcular_frecuencias_barchart(frec_por_nombre_comun, crosswalk, especies)
+        fuente = f"barchart:{barchart_path}"
+
+    elif args.ebird_key:
+        log(f"No hay archivo de bar chart para {region_code}. Usando la API de eBird como respaldo "
+            f"(observaciones de los ultimos {VENTANA_DIAS_API} dias). Ver advertencia de uso comercial "
+            f"en el docstring del modulo.")
+        try:
+            observaciones = obtener_observaciones_recientes_ebird(region_code, args.ebird_key)
+        except Exception as e:
+            log(f"ERROR consultando la API de eBird: {e}. Abortando sin generar nada.")
+            sys.exit(1)
+        log(f"{len(observaciones)} observaciones recibidas de la API de eBird")
+        frecuencias, no_encontradas = calcular_frecuencias_api(observaciones, especies)
+        fuente = f"api_ebird:{region_code}"
+
     else:
-        import birdnet_analyzer.config as cfg
-        labels_file = cfg.BIRDNET_LABELS_FILE
-        if not os.path.isabs(labels_file):
-            import birdnet_analyzer
-            labels_file = os.path.join(os.path.dirname(birdnet_analyzer.__file__), labels_file)
-    log(f"Crosswalk de nombres desde: {labels_file}")
-    crosswalk = cargar_crosswalk_nombres(labels_file)
+        log(f"No hay archivo de frecuencias para {region_code}, y no se paso --ebird-key para usar "
+            f"la API como respaldo. Nada que ajustar todavia para esta region. "
+            f"Abortando sin generar nada (no es un error).")
+        sys.exit(2)
 
-    frec_por_nombre_comun = parsear_barchart(barchart_path)
-    log(f"{len(frec_por_nombre_comun)} especies parseadas del archivo de frecuencias")
-
-    frecuencias, no_encontradas, comun_por_especie = calcular_frecuencias(frec_por_nombre_comun, crosswalk, especies)
+    log(f"Fuente de frecuencias: {fuente}")
     log(f"{len(especies) - len(no_encontradas)}/{len(especies)} de las 193 especies matchearon "
         f"con una frecuencia real en {region_code}")
     if no_encontradas:
@@ -290,7 +364,7 @@ def main():
             "region_code": region_code,
             "lat": args.lat, "lon": args.lon,
             "alpha": args.alpha, "delta_max": DELTA_MAX,
-            "barchart_usado": barchart_path,
+            "fuente": fuente,
             "generado_epoch": time.time(),
             "frecuencias": frecuencias,
             "sin_match": no_encontradas,

@@ -106,26 +106,47 @@ le gane más fácil a una localmente rara cuando el sonido es ambiguo. El
 ajuste está acotado y nunca descarta ninguna especie por completo, solo
 reordena el margen de confianza.
 
-**Ningún dispositivo se conecta nunca a eBird.** La API pública de eBird
-no tiene un endpoint de frecuencia (esa estadística, el "bar chart" del
-sitio, requiere sesión logueada, y sus términos de uso restringen el uso
-comercial sin un acuerdo de licencia aparte). Para no atar el proyecto
--- ni un eventual producto -- a esos términos, la frecuencia de cada
-región se descarga **a mano, una vez, desde una cuenta de eBird propia**
-(el sitio de eBird, no la API), y se versiona en este repositorio bajo
-`frecuencias/<código-de-región>.txt` (formato de exportación de bar
-chart, sin modificar). El dispositivo en el campo, en cambio, sólo hace
-reverse geocoding (lat/lon → código de región, vía Nominatim/OpenStreetMap,
-datos abiertos, sin restricción de uso comercial) y busca si ya existe el
-archivo de esa región, primero localmente y si no lo tiene, lo descarga
-de este mismo repositorio por `raw.githubusercontent.com` (no de eBird).
-Si todavía no se cargó el archivo de esa región, el dispositivo sigue
-con el modelo universal sin ajustar, sin error ni bloqueo.
+**Fuente preferida: archivos ya descargados a mano, sin conexión a eBird
+desde el dispositivo.** La API pública de eBird no tiene un endpoint de
+frecuencia (esa estadística, el "bar chart" del sitio, requiere sesión
+logueada, y sus términos de uso restringen el uso comercial sin un
+acuerdo de licencia aparte). Para no atar el proyecto a esos términos, la
+frecuencia de cada región se descarga preferentemente **a mano, una vez,
+desde una cuenta de eBird propia** (el sitio de eBird, no la API), y se
+versiona en este repositorio bajo `frecuencias/<código-de-región>.txt`
+(formato de exportación de bar chart, sin modificar). El dispositivo en
+el campo hace reverse geocoding (lat/lon → código de región, vía
+Nominatim/OpenStreetMap, datos abiertos, sin restricción de uso
+comercial) y busca si ya existe el archivo de esa región, primero
+localmente y si no lo tiene, lo descarga de este mismo repositorio por
+`raw.githubusercontent.com` (no de eBird).
 
 Para agregar una región nueva: entrar a `ebird.org/barchart` logueado,
 elegir la región (código tipo ISO 3166-2, ej. `AR-B` para Buenos Aires),
 descargar el archivo, y subirlo a `frecuencias/<código>.txt` en este
 repositorio. `AR-B` ya está cargado como ejemplo.
+
+**Respaldo opcional: API pública de eBird.** Si todavía no se cargó el
+archivo de una región, y se configuró una API key de eBird (gratis,
+[`ebird.org/api/keygen`](https://ebird.org/api/keygen), variable
+`EBIRD_API_KEY` en `config_general.txt` de `LSD-Tector2.0`), el
+dispositivo la usa como respaldo: observaciones recientes (últimos 30
+días, el máximo que permite la API) como proxy de frecuencia. Es una
+muestra bastante más chica y ruidosa que el bar chart histórico (se
+prefiere el archivo siempre que exista), pero sirve para cubrir una
+región nueva sin depender de que alguien la haya descargado a mano
+todavía. **Importante si el dispositivo llega a venderse como producto**:
+la API pública de eBird está sujeta a los términos de uso de eBird/Cornell
+Lab, que restringen el uso comercial sin un acuerdo de licencia aparte
+(ver la sección "Solicite un acuerdo de licencia" en el alta de la API
+key). Este respaldo se agregó para uso académico/de investigación del
+proyecto tal como está hoy; si el uso comercial se vuelve una posibilidad
+real, conviene revisar esto con eBird antes de seguir dependiendo de la
+API en producción, o directamente no configurar `EBIRD_API_KEY` y
+depender solo de los archivos ya descargados a mano (que no tienen esta
+restricción, porque nunca llaman a la API desde el dispositivo). Sin
+archivo de región y sin API key configurada, el dispositivo sigue con el
+modelo universal sin ajustar, sin error ni bloqueo en ningún caso.
 
 En el dispositivo, esto corre automáticamente vía
 `scripts/aplicar_ajuste_regional.sh` (en `LSD-Tector2.0`), después de
