@@ -1,5 +1,37 @@
 # Informe de fallas — LSDTector_Classifier_v2
 
+## RESUELTO (21/8)
+
+Causa raíz confirmada: la hipótesis del punto "Hipótesis de causa raíz"
+más abajo era correcta. El modelo se entrenaba con `LogisticRegression`
+multinomial (softmax), que solo aprende preferencia relativa entre las
+193 clases y nunca restringe la escala absoluta de sus logits. Producción
+no usa ranking: aplica un sigmoid absoluto e independiente a cada una de
+las 6715 clases. Nada en el entrenamiento original impedía que muchas
+clases tuvieran logit alto al mismo tiempo.
+
+Corrección aplicada: cada una de las 193 clases se reentrenó como un
+clasificador logístico binario independiente (uno contra todos), en vez
+de un único modelo multinomial. Además, se agregaron dos pools de
+negativos que el modelo original nunca había visto: ~1000 especies reales
+fuera de las 193 (de todo el catálogo global de BirdNET) y ~3600 clips de
+sonido genuinamente no-ave (ESC-50: viento, lluvia, tránsito, voces,
+motores, etc.), usados como negativo universal compartido por las 193
+clases.
+
+Validado con la metodología real de producción (umbral fijo 0.7 aplicado
+de forma independiente a cada clase, agrupado por segmento de 3s, no
+top-1/argmax) sobre las 1880 grabaciones de validación: 87.3% accuracy
+top-1, 85.4% recall por segmento, con una tasa de detecciones espurias
+por segmento (44.9%) igual o mejor que la del modelo original sin
+reentrenar (48.3%). El modelo corregido ya está en `modelo/` en este
+repositorio, reemplazando al roto.
+
+El detalle completo del diagnóstico original queda documentado abajo tal
+cual se escribió en su momento, como referencia.
+
+---
+
 Fecha: 2026-08-20
 Contexto: primera instalación real en hardware de campo (tector2, LSD-Tector 2.0),
 integrado al pipeline de producción de BirdNET-Pi (no al harness aislado de

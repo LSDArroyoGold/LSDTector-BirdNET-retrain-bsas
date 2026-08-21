@@ -1,45 +1,37 @@
 # LSDTector: clasificador BirdNET v2
 
-> ⚠️ **v2 tiene una falla de calibración confirmada en hardware real**:
-> dispara docenas de especies simultáneas con confianza >95% en el mismo
-> clip, incluyendo especies imposibles para la región (ver
-> [`INFORME_FALLAS_V2.md`](INFORME_FALLAS_V2.md) para evidencia, causa
-> probable y qué hace falta para la v3). Mientras tanto, tector2 corre con
-> el modelo original de BirdNET, no con este.
->
-> **El `.tflite` y su archivo de labels se sacaron de este repositorio**
-> hasta que exista una v3 corregida (ver [`modelo/`](modelo/)). Es
-> deliberado: `LSD-Tector2.0/scripts/actualizar_modelo.sh` actualiza el
-> modelo de forma automática en cada ventana de grabación comparando el
-> último commit de este repo, así que mientras el `.tflite` roto siguiera
-> acá, cualquier dispositivo (incluido tector2, ya revertido a mano)
-> terminaría reinstalándolo solo, sin que nadie lo pidiera.
+> ✅ **Falla de calibración corregida y validada (21/8).** La versión
+> anterior tenía un desajuste entre cómo se entrenaba (por ranking
+> relativo entre las 193 clases) y cómo se usa en producción (umbral
+> absoluto e independiente por clase), que causaba decenas de detecciones
+> simultáneas falsas. Corregido reentrenando cada una de las 193 clases
+> como un clasificador binario independiente, con negativos reales de
+> ~1000 especies ajenas y sonido no-ave (ver
+> [`INFORME_FALLAS_V2.md`](INFORME_FALLAS_V2.md) para el detalle completo,
+> incluida la sección de resolución al principio).
 
 Clasificador de BirdNET reentrenado para las 193 especies de aves de la
-región del campo de prueba (Buenos Aires, código eBird AR-B), pensado
-para instalar en la Raspberry Pi del LSD-Tector 2.0. **Actualmente no hay
-ningún modelo instalable en este repositorio**, ver la advertencia
-arriba.
+región del campo de prueba (Buenos Aires, código eBird AR-B), listo para
+instalar en la Raspberry Pi del LSD-Tector 2.0.
 
-El modelo, cuando esté disponible en `modelo/LSDTector_Classifier_v2.tflite`
-(o el nombre que le corresponda a la v3), agrega al catálogo global de
-BirdNET (modo *Append*) una capa de decisión nueva especializada en estas
-193 especies locales. La versión 2, antes de descubrirse la falla, medía
-mejor accuracy top-1 que el modelo global de BirdNET para esta región
-(63.6% a 85.7% global, 62.6% a 86.0% macro sobre el conjunto de
-validación), pero esa métrica se calculó con una metodología (top-1,
-argmax sobre un único clip) que no coincide con cómo el modelo se usa
-realmente en producción (umbral fijo aplicado de forma independiente a
-cada una de las 6715 clases), lo que probablemente explica la falla. El
-detalle metodológico completo, tanto del reentrenamiento original como de
-la falla encontrada después en campo, está en el informe del proyecto y
-en `INFORME_FALLAS_V2.md`.
+El modelo (`modelo/LSDTector_Classifier_v2.tflite`) agrega al catálogo
+global de BirdNET (modo *Append*) una capa de decisión nueva especializada
+en estas 193 especies locales. Evaluado con la metodología real de
+producción (umbral fijo de 0.7 aplicado de forma independiente a cada una
+de las 6715 clases, agrupado por segmento de 3 segundos, no top-1/argmax):
+87.3% de accuracy top-1 y 85.4% de recall por segmento sobre las 193
+especies locales (contra 63.0%/71.3% del modelo original sin reentrenar),
+con una tasa de detecciones falsas simultáneas ("especies espurias por
+segmento") igual o mejor que la del modelo original: 44.9% de segmentos
+con alguna detección espuria contra 48.3% del original. El detalle
+metodológico completo está en el informe del proyecto y en
+`INFORME_FALLAS_V2.md`.
 
-El archivo `.tflite`, cuando exista una versión corregida, es
-autocontenido: incluye el extractor de características original de
-BirdNET (sin modificar), la capa de decisión original (sin modificar), y
-la capa de decisión nueva, todo en un único grafo. No hace falta ningún
-otro archivo del BirdNET original.
+El archivo `.tflite` es autocontenido: incluye el extractor de
+características original de BirdNET (sin modificar), la capa de decisión
+original (sin modificar), y la capa de decisión nueva, todo en un único
+grafo con 6715 salidas en total. No hace falta ningún otro archivo del
+BirdNET original.
 
 ## Instalación
 
@@ -54,8 +46,7 @@ bash instalar.sh
 Esto instala un entorno virtual de Python dedicado (`~/birdnet-v2-env`)
 con `birdnet-analyzer` en la misma versión usada para entrenar y validar
 el modelo (2.4.0), sin tocar ningún otro software que ya corra en el
-dispositivo. Deja el entorno listo, pero mientras no haya un `.tflite` en
-`modelo/` no hay nada para correr todavía (ver "Probar que funciona").
+dispositivo.
 
 ## Probar que funciona
 
