@@ -9,6 +9,14 @@
 > ~1000 especies ajenas y sonido no-ave (ver
 > [`INFORME_FALLAS_V2.md`](INFORME_FALLAS_V2.md) para el detalle completo,
 > incluida la sección de resolución al principio).
+>
+> ⚠️ **Pero: confusión Hornero/Kestrel confirmada, sin resolver (21/8).**
+> Primera prueba real de campo con v2 corregido: con audio real de
+> *Furnarius rufus*, el modelo nunca cruza el umbral de producción para
+> Hornero (0/35 segmentos en ~4 min) y da dos falsos positivos confiados
+> de *Falco sparverius* (0.79 y 0.92). Contradice las métricas de
+> validación reportadas para al menos este par de especies. Ver
+> [`INFORME_CONFUSION_HORNERO_KESTREL.md`](INFORME_CONFUSION_HORNERO_KESTREL.md).
 
 Clasificador de BirdNET reentrenado para las 193 especies de aves de la
 región del campo de prueba (Buenos Aires, código eBird AR-B), listo para
