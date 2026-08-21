@@ -87,7 +87,7 @@ OUT_DIR_DEFAULT = os.path.join(SCRIPT_DIR, "modelo_regional")
 
 ALPHA_DEFAULT = 0.6
 DELTA_MAX = 4.0          # tope del ajuste, en unidades de logit
-FLOOR_FRACCION = 0.05    # piso de frecuencia (respecto de la minima real observada) para
+FLOOR_FRACCION = 0.3     # piso de frecuencia (respecto de la minima real observada) para
                          # especies ausentes del archivo/observaciones, nunca cero
 TIMEOUT_RED = 20
 USER_AGENT = "LSDTector-BirdNET-retrain-bsas/1.0 (contacto: LSDArroyoGold)"
