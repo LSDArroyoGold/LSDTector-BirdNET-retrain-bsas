@@ -1,5 +1,54 @@
 # Informe: confusión Furnarius rufus / Falco sparverius en v2 (post-fix)
 
+## CORRECCIÓN IMPORTANTE (21/8, más tarde el mismo día)
+
+**Todo lo que sigue midió la neurona equivocada.** El archivo de labels
+tiene 6715 entradas: las primeras 6522 (formato
+`NombreCientífico_NombreComún`) son el catálogo global original de
+BirdNET, **sin modificar por este proyecto**. Las 193 especies
+realmente reentrenadas están en los últimos 193 índices (6522-6714),
+con formato de **solo nombre científico, sin guión bajo** (ej.
+`Furnarius rufus`, no `Furnarius rufus_Rufous Hornero`).
+
+Este informe usó `labels.index('Furnarius rufus_Rufous Hornero')` y
+`labels.index('Falco sparverius_American Kestrel')` — es decir, midió
+la neurona **original de BirdNET, intacta**, no la que este proyecto
+reentrena y calibra. Todo lo que dice más abajo sobre "la falla de
+calibración de v2" y "la confusión sigue sin resolver" es sobre esa capa
+original, que nunca fue tocada por v2 ni por el ajuste regional.
+
+Confirmado directamente: comparando logits de dos exports del mismo
+modelo base con distinto `--alpha` (0.6 vs 1.2) sobre el mismo input
+sintético, la neurona `Furnarius rufus_Rufous Hornero` (índice
+combinado) tiene diferencia **exactamente 0.0** entre ambos exports —
+prueba de que nunca recibió el ajuste. La neurona `Furnarius rufus`
+(índice bare, la real) sí difiere (+1.68 en logit).
+
+**Con la neurona correcta**, midiendo sobre las mismas grabaciones de
+campo reales de Hornero: los scores son bastante más bajos en general
+(típicamente 0.00-0.2, rara vez más) que lo que este informe reportó
+usando la neurona equivocada. El ajuste regional (`--alpha`) sí mueve la
+aguja cuando ya hay algo de señal real (en un caso, 0.13 → 0.41 al
+duplicar alpha), pero no genera señal donde el extractor casi no ve nada
+de la especie — en esos segmentos gana Kestrel por default, con valores
+igual de bajos (0.01-0.07), sin ser una confusión fuerte, simplemente
+ausencia de señal de ambas clases.
+
+**Conclusión revisada**: no hay evidencia de una confusión fuerte y
+sistemática Hornero/Kestrel en la capa realmente reentrenada (a
+diferencia de lo que este informe concluía originalmente sobre la capa
+original). Lo que sí parece real: la sensibilidad de la neurona
+reentrenada de Hornero es baja para varias grabaciones de campo
+puntuales -- vale la pena revisar si hace falta más/mejores ejemplos de
+entrenamiento para esa especie específica, no necesariamente un problema
+de confusión entre clases.
+
+El contenido original de este informe queda abajo, sin editar, como
+referencia de lo que se midió (con la salvedad de que fue sobre la
+neurona equivocada).
+
+---
+
 Fecha: 2026-08-21
 Contexto: primera prueba real en campo del modelo v2 corregido (commit
 `b9d5e77`, el que resuelve la falla de calibración documentada en
