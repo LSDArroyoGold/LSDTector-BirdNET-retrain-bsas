@@ -142,7 +142,7 @@ def parsear_barchart(path):
             if len(partes) < 2:
                 continue
             nombre = partes[0].strip()
-            if not nombre or nombre.lower().startswith("sample size"):
+            if not nombre or nombre.lower().startswith("sample size") or nombre.lower().startswith("number of taxa"):
                 continue
             valores = []
             for v in partes[1:]:
@@ -154,7 +154,10 @@ def parsear_barchart(path):
                 except ValueError:
                     valores = None
                     break
-            if not valores:
+            # Una fila de especie real tiene 48 frecuencias quincenales.
+            # Filas de encabezado sueltas (ej. "Number of taxa: \t645")
+            # dan un unico valor y no deben tratarse como especie.
+            if not valores or len(valores) < 24:
                 continue
             frecuencias[nombre.lower()] = sum(valores) / len(valores)
     if not frecuencias:
