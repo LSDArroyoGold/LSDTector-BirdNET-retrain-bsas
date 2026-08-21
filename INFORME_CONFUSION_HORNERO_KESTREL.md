@@ -1,5 +1,72 @@
 # Informe: confusión Furnarius rufus / Falco sparverius en v2 (post-fix)
 
+## CORRECCIÓN IMPORTANTE (21/8, más tarde el mismo día)
+
+**Todo lo que sigue midió la neurona equivocada.** El archivo de labels
+tiene 6715 entradas: las primeras 6522 (formato
+`NombreCientífico_NombreComún`) son el catálogo global original de
+BirdNET, **sin modificar por este proyecto**. Las 193 especies
+realmente reentrenadas están en los últimos 193 índices (6522-6714),
+con formato de **solo nombre científico, sin guión bajo** (ej.
+`Furnarius rufus`, no `Furnarius rufus_Rufous Hornero`).
+
+Este informe usó `labels.index('Furnarius rufus_Rufous Hornero')` y
+`labels.index('Falco sparverius_American Kestrel')` — es decir, midió
+la neurona **original de BirdNET, intacta**, no la que este proyecto
+reentrena y calibra. Todo lo que dice más abajo sobre "la falla de
+calibración de v2" y "la confusión sigue sin resolver" es sobre esa capa
+original, que nunca fue tocada por v2 ni por el ajuste regional.
+
+Confirmado directamente: comparando logits de dos exports del mismo
+modelo base con distinto `--alpha` (0.6 vs 1.2) sobre el mismo input
+sintético, la neurona `Furnarius rufus_Rufous Hornero` (índice
+combinado) tiene diferencia **exactamente 0.0** entre ambos exports —
+prueba de que nunca recibió el ajuste. La neurona `Furnarius rufus`
+(índice bare, la real) sí difiere (+1.68 en logit).
+
+**Con la neurona correcta**, midiendo sobre grabaciones de campo reales
+de las tres especies que se probaron hoy (Kiskadee, Hornero, Kestrel),
+en producción (alpha=0.6) y con alpha duplicado (1.2):
+
+| Especie | Producción (alpha=0.6) | alpha=1.2 | Cruza 0.7 en producción |
+|---|---|---|---|
+| **Pitangus sulphuratus** (Kiskadee) | 0.60 / **0.998** | 0.87 / 0.9996 | **Sí**, limpio |
+| **Furnarius rufus** (Hornero) | máx 0.13-0.22 | máx 0.41 | No |
+| **Falco sparverius** (Kestrel) | máx 0.09 (típico <0.03) | similar | No, y casi sin señal en ningún segmento |
+
+**Kiskadee funciona muy bien** — la neurona reentrenada real detecta la
+especie con confianza alta y limpia, cruzando el umbral de producción
+sin ayuda del ajuste regional siquiera.
+
+**Kestrel no muestra señal fuerte en ningún segmento probado** (máximo
+0.09, la mayoría por debajo de 0.03) — no hay evidencia de una confusión
+fuerte y mal dirigida hacia esta clase. Cuando "gana" algún segmento es
+por default, comparado contra un Hornero todavía más bajo, no por una
+confianza real.
+
+**Hornero tiene señal real pero débil** (bien por encima del ruido de
+fondo, que ronda 0.0001-0.0005), y el ajuste regional (`--alpha`) la
+refuerza notablemente cuando ya hay algo que reforzar (0.13 → 0.41 al
+duplicar alpha en un caso), pero no alcanza el umbral de producción en
+ninguna de las grabaciones probadas hoy.
+
+**Conclusión revisada**: no hay una confusión fuerte y sistemática
+Hornero/Kestrel en la capa realmente reentrenada (a diferencia de lo que
+este informe concluía originalmente, midiendo la capa equivocada). El
+problema real parece ser sensibilidad baja específicamente en la
+neurona de Hornero para las grabaciones de campo probadas -- vale la
+pena revisar si hace falta más o mejores ejemplos de entrenamiento para
+esa especie puntual. Kiskadee, en cambio, es un resultado sólido y
+demuestra que el enfoque del reentreno (Append + calibración por clase)
+funciona bien cuando hay suficientes datos de entrenamiento de calidad
+para la especie.
+
+El contenido original de este informe queda abajo, sin editar, como
+referencia de lo que se midió (con la salvedad de que fue sobre la
+neurona equivocada).
+
+---
+
 Fecha: 2026-08-21
 Contexto: primera prueba real en campo del modelo v2 corregido (commit
 `b9d5e77`, el que resuelve la falla de calibración documentada en

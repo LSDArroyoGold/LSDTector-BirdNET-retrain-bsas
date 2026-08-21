@@ -10,12 +10,14 @@
 > [`INFORME_FALLAS_V2.md`](INFORME_FALLAS_V2.md) para el detalle completo,
 > incluida la sección de resolución al principio).
 >
-> ⚠️ **Pero: confusión Hornero/Kestrel confirmada, sin resolver (21/8).**
-> Primera prueba real de campo con v2 corregido: con audio real de
-> *Furnarius rufus*, el modelo nunca cruza el umbral de producción para
-> Hornero (0/35 segmentos en ~4 min) y da dos falsos positivos confiados
-> de *Falco sparverius* (0.79 y 0.92). Contradice las métricas de
-> validación reportadas para al menos este par de especies. Ver
+> ⚠️ **Corregido (21/8, más tarde): la "confusión Hornero/Kestrel"
+> reportada antes medía la neurona equivocada** (la del catálogo global
+> original, sin tocar por este proyecto — el índice real de las 193
+> especies reentrenadas no lleva `_NombreComún`). Con la neurona
+> correcta no hay evidencia de confusión fuerte entre estas dos especies;
+> lo que sí parece real es baja sensibilidad de la neurona reentrenada de
+> Hornero en ciertas grabaciones de campo puntuales. Ver la sección
+> "CORRECCIÓN" al principio de
 > [`INFORME_CONFUSION_HORNERO_KESTREL.md`](INFORME_CONFUSION_HORNERO_KESTREL.md).
 
 Clasificador de BirdNET reentrenado para las 193 especies de aves de la

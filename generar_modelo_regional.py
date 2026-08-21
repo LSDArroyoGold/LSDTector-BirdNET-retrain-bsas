@@ -85,7 +85,7 @@ PESOS_PATH = os.path.join(SCRIPT_DIR, "modelo", "pesos_193_locales.npz")
 FRECUENCIAS_DIR = os.path.join(SCRIPT_DIR, "frecuencias")
 OUT_DIR_DEFAULT = os.path.join(SCRIPT_DIR, "modelo_regional")
 
-ALPHA_DEFAULT = 0.6
+ALPHA_DEFAULT = 1.2
 DELTA_MAX = 4.0          # tope del ajuste, en unidades de logit
 FLOOR_FRACCION = 0.3     # piso de frecuencia (respecto de la minima real observada) para
                          # especies ausentes del archivo/observaciones, nunca cero
