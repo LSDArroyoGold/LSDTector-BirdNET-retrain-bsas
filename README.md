@@ -96,6 +96,57 @@ cualquier dispositivo que actualizara, sin que nadie lo pidiera.
 de forma aislada y manual, sin depender de BirdNET-Pi ni del resto del
 pipeline del LSD-Tector, y siguen sirviendo para eso.
 
+## Ajuste regional por frecuencia (opcional)
+
+Además del modelo universal, este repositorio permite generar una versión
+ajustada a la región donde se instala cada dispositivo: a cada una de las
+193 especies locales se le suma un sesgo proporcional a su frecuencia
+real de observación en esa región, para que una especie localmente común
+le gane más fácil a una localmente rara cuando el sonido es ambiguo. El
+ajuste está acotado y nunca descarta ninguna especie por completo, solo
+reordena el margen de confianza.
+
+**Ningún dispositivo se conecta nunca a eBird.** La API pública de eBird
+no tiene un endpoint de frecuencia (esa estadística, el "bar chart" del
+sitio, requiere sesión logueada, y sus términos de uso restringen el uso
+comercial sin un acuerdo de licencia aparte). Para no atar el proyecto
+-- ni un eventual producto -- a esos términos, la frecuencia de cada
+región se descarga **a mano, una vez, desde una cuenta de eBird propia**
+(el sitio de eBird, no la API), y se versiona en este repositorio bajo
+`frecuencias/<código-de-región>.txt` (formato de exportación de bar
+chart, sin modificar). El dispositivo en el campo, en cambio, sólo hace
+reverse geocoding (lat/lon → código de región, vía Nominatim/OpenStreetMap,
+datos abiertos, sin restricción de uso comercial) y busca si ya existe el
+archivo de esa región, primero localmente y si no lo tiene, lo descarga
+de este mismo repositorio por `raw.githubusercontent.com` (no de eBird).
+Si todavía no se cargó el archivo de esa región, el dispositivo sigue
+con el modelo universal sin ajustar, sin error ni bloqueo.
+
+Para agregar una región nueva: entrar a `ebird.org/barchart` logueado,
+elegir la región (código tipo ISO 3166-2, ej. `AR-B` para Buenos Aires),
+descargar el archivo, y subirlo a `frecuencias/<código>.txt` en este
+repositorio. `AR-B` ya está cargado como ejemplo.
+
+En el dispositivo, esto corre automáticamente vía
+`scripts/aplicar_ajuste_regional.sh` (en `LSD-Tector2.0`), después de
+`actualizar_modelo.sh`, pero necesita el entorno `~/birdnet-v2-env` de
+este mismo repositorio (`bash instalar.sh`, ver arriba) para poder
+reexportar el `.tflite`. Sin ese entorno, o sin archivo de región
+todavía, el dispositivo sigue con el modelo universal, que es siempre el
+comportamiento por defecto.
+
+Para generarlo a mano (por ejemplo para revisar el resultado antes de
+confiar en el automatismo):
+
+```bash
+source ~/birdnet-v2-env/bin/activate
+python3 generar_modelo_regional.py --lat -34.92 --lon -57.95
+```
+
+Guarda el `.tflite`, las labels, y un `ajuste_regional_meta.json` con el
+detalle especie por especie (frecuencia usada y ajuste aplicado) en
+`modelo_regional/`, para poder auditar exactamente qué se ajustó.
+
 ## Qué NO incluye este repositorio (todavía)
 
 Este repo resuelve únicamente el modelo en sí: entrenarlo, empaquetarlo,
