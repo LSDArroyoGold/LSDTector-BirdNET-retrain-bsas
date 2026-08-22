@@ -118,77 +118,32 @@ cualquier dispositivo que actualizara, sin que nadie lo pidiera.
 de forma aislada y manual, sin depender de BirdNET-Pi ni del resto del
 pipeline del LSD-Tector, y siguen sirviendo para eso.
 
-## Ajuste regional por frecuencia (opcional)
+## Ajuste regional por frecuencia: se mudó de repo
 
-Además del modelo universal, este repositorio permite generar una versión
-ajustada a la región donde se instala cada dispositivo: a cada una de las
-193 especies locales se le suma un sesgo proporcional a su frecuencia
-real de observación en esa región, para que una especie localmente común
-le gane más fácil a una localmente rara cuando el sonido es ambiguo. El
-ajuste está acotado y nunca descarta ninguna especie por completo, solo
-reordena el margen de confianza.
+El ajuste de sesgo por frecuencia regional (favorecer especies
+localmente comunes cuando el sonido es ambiguo) ya no vive acá. Quedó
+en [`LSDTector-BirdNET-custom-v1`](https://github.com/LSDArroyoGold/LSDTector-BirdNET-custom-v1),
+separado a propósito: ese repo empaqueta el catálogo stock de BirdNET
+(sin las 193 clases de este proyecto) con el ajuste regional aplicado
+directamente encima. Mientras este repo siga en desarrollo activo del
+reentreno en sí, conviene mantener las dos cosas desacopladas — cuándo
+y cómo se combinan (reentreno + ajuste regional, los dos juntos) es una
+decisión aparte, todavía sin tomar.
 
-**Fuente preferida: archivos ya descargados a mano, sin conexión a eBird
-desde el dispositivo.** La API pública de eBird no tiene un endpoint de
-frecuencia (esa estadística, el "bar chart" del sitio, requiere sesión
-logueada, y sus términos de uso restringen el uso comercial sin un
-acuerdo de licencia aparte). Para no atar el proyecto a esos términos, la
-frecuencia de cada región se descarga preferentemente **a mano, una vez,
-desde una cuenta de eBird propia** (el sitio de eBird, no la API), y se
-versiona en este repositorio bajo `frecuencias/<código-de-región>.txt`
-(formato de exportación de bar chart, sin modificar). El dispositivo en
-el campo hace reverse geocoding (lat/lon → código de región, vía
-Nominatim/OpenStreetMap, datos abiertos, sin restricción de uso
-comercial) y busca si ya existe el archivo de esa región, primero
-localmente y si no lo tiene, lo descarga de este mismo repositorio por
-`raw.githubusercontent.com` (no de eBird).
+## Audio de las detecciones y espectrograma a espectro completo
 
-Para agregar una región nueva: entrar a `ebird.org/barchart` logueado,
-elegir la región (código tipo ISO 3166-2, ej. `AR-B` para Buenos Aires),
-descargar el archivo, y subirlo a `frecuencias/<código>.txt` en este
-repositorio. `AR-B` ya está cargado como ejemplo.
-
-**Respaldo opcional: API pública de eBird.** Si todavía no se cargó el
-archivo de una región, y se configuró una API key de eBird (gratis,
-[`ebird.org/api/keygen`](https://ebird.org/api/keygen), variable
-`EBIRD_API_KEY` en `config_general.txt` de `LSD-Tector2.0`), el
-dispositivo la usa como respaldo: observaciones recientes (últimos 30
-días, el máximo que permite la API) como proxy de frecuencia. Es una
-muestra bastante más chica y ruidosa que el bar chart histórico (se
-prefiere el archivo siempre que exista), pero sirve para cubrir una
-región nueva sin depender de que alguien la haya descargado a mano
-todavía. **Importante si el dispositivo llega a venderse como producto**:
-la API pública de eBird está sujeta a los términos de uso de eBird/Cornell
-Lab, que restringen el uso comercial sin un acuerdo de licencia aparte
-(ver la sección "Solicite un acuerdo de licencia" en el alta de la API
-key). Este respaldo se agregó para uso académico/de investigación del
-proyecto tal como está hoy; si el uso comercial se vuelve una posibilidad
-real, conviene revisar esto con eBird antes de seguir dependiendo de la
-API en producción, o directamente no configurar `EBIRD_API_KEY` y
-depender solo de los archivos ya descargados a mano (que no tienen esta
-restricción, porque nunca llaman a la API desde el dispositivo). Sin
-archivo de región y sin API key configurada, el dispositivo sigue con el
-modelo universal sin ajustar, sin error ni bloqueo en ningún caso.
-
-En el dispositivo, esto corre automáticamente vía
-`scripts/aplicar_ajuste_regional.sh` (en `LSD-Tector2.0`), después de
-`actualizar_modelo.sh`, pero necesita el entorno `~/birdnet-v2-env` de
-este mismo repositorio (`bash instalar.sh`, ver arriba) para poder
-reexportar el `.tflite`. Sin ese entorno, o sin archivo de región
-todavía, el dispositivo sigue con el modelo universal, que es siempre el
-comportamiento por defecto.
-
-Para generarlo a mano (por ejemplo para revisar el resultado antes de
-confiar en el automatismo):
-
-```bash
-source ~/birdnet-v2-env/bin/activate
-python3 generar_modelo_regional.py --lat -34.92 --lon -57.95
-```
-
-Guarda el `.tflite`, las labels, y un `ajuste_regional_meta.json` con el
-detalle especie por especie (frecuencia usada y ajuste aplicado) en
-`modelo_regional/`, para poder auditar exactamente qué se ajustó.
+`patches/reporting.py` es una versión parcheada de
+`scripts/utils/reporting.py` de BirdNET-Pi: sube el bitrate del mp3 de
+cada detección a 320kbps (por defecto, el encoder LAME le aplica un
+filtro pasa-bajos que recorta el audio guardado a ~16kHz aunque el
+archivo diga 48000 Hz — confirmado con FFT sobre una detección real) y
+saca el remuestreo a 24kHz que traía la generación del espectrograma
+(limitaba el eje de frecuencia visible a 12kHz). Ninguno de los dos
+cambios afecta la detección en sí — el modelo analiza el `.wav` crudo a
+48kHz antes de este paso — solo mejora la fidelidad de lo que se
+guarda/muestra después. Para aplicarlo: copiar
+`patches/reporting.py` sobre `~/BirdNET-Pi/scripts/utils/reporting.py`
+y reiniciar `birdnet_analysis.service`.
 
 ## Qué NO incluye este repositorio (todavía)
 
