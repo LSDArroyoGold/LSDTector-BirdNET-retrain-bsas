@@ -6,7 +6,7 @@ from tensorflow import lite as tflite
 
 MODEL = os.path.expanduser('~/Desktop/Tector/LSDTector-BirdNET-retrain-bsas/modelo/LSDTector_Classifier_v2.tflite')
 LABELS = os.path.expanduser('~/Desktop/Tector/LSDTector-BirdNET-retrain-bsas/modelo/LSDTector_Classifier_v2_Labels.txt')
-DET_DIR = os.path.expanduser('~/Desktop/Tector/BirdNET_Detecciones')
+DET_DIR = os.path.expanduser('~/Desktop/Tector/Datasets_prueba/BirdNET_Detecciones')
 
 with open(LABELS) as f:
     labels = [l.strip() for l in f]

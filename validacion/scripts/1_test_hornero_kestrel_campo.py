@@ -54,8 +54,8 @@ def analizar(path, sens):
     return mejor_h, mejor_k, mejor_h_orig, mejor_k_orig
 
 CARPETAS = {
-    'Rufous_Hornero (etiquetado Hornero)': os.path.expanduser('~/Desktop/Tector/Audios confusion/Rufous_Hornero'),
-    'American_Kestrel (etiquetado Kestrel, en realidad Hornero segun el usuario)': os.path.expanduser('~/Desktop/Tector/Audios confusion/American_Kestrel'),
+    'Rufous_Hornero (etiquetado Hornero)': os.path.expanduser('~/Desktop/Tector/Datasets_prueba/Audios confusion/Rufous_Hornero'),
+    'American_Kestrel (etiquetado Kestrel, en realidad Hornero segun el usuario)': os.path.expanduser('~/Desktop/Tector/Datasets_prueba/Audios confusion/American_Kestrel'),
 }
 
 UMBRAL = 0.7
@@ -96,7 +96,7 @@ for sens_conf, nombre_sens in [(1.1, 'SENSITIVITY=1.1 (produccion actual)'), (1.
 
 print('\n\n========== KESTREL REAL (Xeno-canto, ground truth confirmado) ==========')
 sens = sens_from_conf(1.1)
-kestrel_files = sorted(glob.glob(os.path.expanduser('~/Desktop/Tector/xenocanto_test/*.mp3')))
+kestrel_files = sorted(glob.glob(os.path.expanduser('~/Desktop/Tector/Datasets_prueba/xenocanto_test/*.mp3')))
 for a in kestrel_files:
     sig, sr = librosa.load(a, sr=48000, mono=True, res_type='kaiser_fast')
     print(f'--- {os.path.basename(a)} ({len(sig)/48000:.1f}s) ---')
@@ -120,7 +120,7 @@ for a in kestrel_files:
     print(f'  Resumen: {n_chunks} segmentos, Kestrel cruza umbral {n_k_cruza}/{n_chunks}, Hornero cruza umbral (falso positivo) {n_h_cruza}/{n_chunks}')
 
 print('\n\n========== HORNERO INDEPENDIENTE (Xeno-canto/Wikimedia, NO en el set de entrenamiento) ==========')
-hornero_files = sorted(glob.glob(os.path.expanduser('~/Desktop/Tector/xenocanto_test/hornero_*')))
+hornero_files = sorted(glob.glob(os.path.expanduser('~/Desktop/Tector/Datasets_prueba/xenocanto_test/hornero_*')))
 for a in hornero_files:
     sig, sr = librosa.load(a, sr=48000, mono=True, res_type='kaiser_fast')
     print(f'--- {os.path.basename(a)} ({len(sig)/48000:.1f}s) ---')

@@ -69,8 +69,8 @@ def procesar_carpeta(carpeta, idx_propio, idx_otro, nombre_propio, nombre_otro):
     print(f'  Segmentos donde {nombre_propio} > {nombre_otro}: {propio_gana}/{total_seg} ({100*propio_gana/max(1,total_seg):.1f}%)')
 
 print('===== HORNERO: 63 grabaciones reales de Argentina, Xeno-canto calidad A =====')
-procesar_carpeta(os.path.expanduser('~/Desktop/Tector/xc_hornero_ar'), IDX_H, IDX_K, 'Hornero', 'Kestrel')
+procesar_carpeta(os.path.expanduser('~/Desktop/Tector/Datasets_prueba/xc_hornero_ar'), IDX_H, IDX_K, 'Hornero', 'Kestrel')
 
 print()
 print('===== KESTREL: 18 grabaciones reales de Argentina, Xeno-canto calidad A =====')
-procesar_carpeta(os.path.expanduser('~/Desktop/Tector/xc_kestrel_ar'), IDX_K, IDX_H, 'Kestrel', 'Hornero')
+procesar_carpeta(os.path.expanduser('~/Desktop/Tector/Datasets_prueba/xc_kestrel_ar'), IDX_K, IDX_H, 'Kestrel', 'Hornero')

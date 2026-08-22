@@ -54,10 +54,10 @@ def cargar_logits(carpeta_o_lista):
 
 print('Cargando logits crudos de todos los sets (una sola vez)...')
 sets = {
-    'Campo: Rufous_Hornero (76)': (cargar_logits(os.path.expanduser('~/Desktop/Tector/Audios confusion/Rufous_Hornero')), IDX_H, IDX_K, 'Hornero', 'Kestrel'),
-    'Campo: American_Kestrel=Hornero real (179)': (cargar_logits(os.path.expanduser('~/Desktop/Tector/Audios confusion/American_Kestrel')), IDX_H, IDX_K, 'Hornero', 'Kestrel'),
-    'Xeno-canto AR: Hornero (63)': (cargar_logits(os.path.expanduser('~/Desktop/Tector/xc_hornero_ar')), IDX_H, IDX_K, 'Hornero', 'Kestrel'),
-    'Xeno-canto AR: Kestrel (18)': (cargar_logits(os.path.expanduser('~/Desktop/Tector/xc_kestrel_ar')), IDX_K, IDX_H, 'Kestrel', 'Hornero'),
+    'Campo: Rufous_Hornero (76)': (cargar_logits(os.path.expanduser('~/Desktop/Tector/Datasets_prueba/Audios confusion/Rufous_Hornero')), IDX_H, IDX_K, 'Hornero', 'Kestrel'),
+    'Campo: American_Kestrel=Hornero real (179)': (cargar_logits(os.path.expanduser('~/Desktop/Tector/Datasets_prueba/Audios confusion/American_Kestrel')), IDX_H, IDX_K, 'Hornero', 'Kestrel'),
+    'Xeno-canto AR: Hornero (63)': (cargar_logits(os.path.expanduser('~/Desktop/Tector/Datasets_prueba/xc_hornero_ar')), IDX_H, IDX_K, 'Hornero', 'Kestrel'),
+    'Xeno-canto AR: Kestrel (18)': (cargar_logits(os.path.expanduser('~/Desktop/Tector/Datasets_prueba/xc_kestrel_ar')), IDX_K, IDX_H, 'Kestrel', 'Hornero'),
 }
 print('Listo.\n')
 

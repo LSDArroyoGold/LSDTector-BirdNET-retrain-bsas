@@ -48,8 +48,8 @@ def max_scores(archivos, idxs_dict):
             resultados[l].append(mejores[l])
     return {l: np.array(v) for l, v in resultados.items()}
 
-xc_hornero = sorted(glob.glob(os.path.expanduser('~/Desktop/Tector/xc_hornero_ar/*.mp3')))
-xc_kestrel = sorted(glob.glob(os.path.expanduser('~/Desktop/Tector/xc_kestrel_ar/*.mp3')))
+xc_hornero = sorted(glob.glob(os.path.expanduser('~/Desktop/Tector/Datasets_prueba/xc_hornero_ar/*.mp3')))
+xc_kestrel = sorted(glob.glob(os.path.expanduser('~/Desktop/Tector/Datasets_prueba/xc_kestrel_ar/*.mp3')))
 externos = xc_hornero + xc_kestrel
 
 print(f'Audio EXTERNO (Xeno-canto, NO tector1): {len(externos)} archivos')

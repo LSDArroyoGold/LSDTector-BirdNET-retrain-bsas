@@ -7,9 +7,9 @@ tiene el material de soporte:
 - `scripts/1` a `6`: corridos localmente contra `modelo/LSDTector_Classifier_v2.tflite`,
   sin depender de BirdNET-Pi ni de ningún dispositivo. Requieren un venv de
   Python con `tensorflow`, `librosa`, `numpy`, `resampy`, `soundfile`. Las
-  rutas de audio de entrada (`~/Desktop/Tector/Audios confusion`,
-  `~/Desktop/Tector/BirdNET_Detecciones`, `~/Desktop/Tector/xc_hornero_ar`,
-  `~/Desktop/Tector/xc_kestrel_ar`) son locales de la máquina donde se
+  rutas de audio de entrada (`~/Desktop/Tector/Datasets_prueba/Audios confusion`,
+  `~/Desktop/Tector/Datasets_prueba/BirdNET_Detecciones`, `~/Desktop/Tector/Datasets_prueba/xc_hornero_ar`,
+  `~/Desktop/Tector/Datasets_prueba/xc_kestrel_ar`) son locales de la máquina donde se
   corrió esto, no están en el repo por tamaño — hay que ajustar las rutas
   si se quiere repetir en otra máquina.
 - `scripts/7_revisar_manual_merlin.py`: script interactivo para verificar
