@@ -1,5 +1,23 @@
 # LSDTector: clasificador BirdNET v2
 
+> ✅ **Colapso de sensibilidad en audio real de campo, corregido y
+> validado (22/8).** El problema no era solo Hornero/Kestrel: al
+> extender el chequeo a más especies con volumen suficiente de
+> detecciones reales, el modelo reentrenado perdía sensibilidad fuerte
+> en 8 de ellas (Hornero, Kiskadee, Chingolo y otras), aunque el
+> catálogo original de BirdNET las detectaba perfecto en esos mismos
+> clips. Se investigó a fondo (banda, ruido, reverb, compresión,
+> distorsión, pipeline, sobreajuste, todo probado y descartado como
+> causa única) hasta encontrar que el audio real de campo corre el
+> embedding interno del modelo en una dirección muy específica que
+> ninguna degradación sintética de Xeno-canto reproduce. Se reentrenaron
+> esas 8 neuronas puntuales con audio real de campo (nunca con
+> Xeno-canto degradado), validado contra un holdout real nunca visto en
+> entrenamiento: las 8 mejoraron, ninguna empeoró, y las otras 185
+> especies quedaron sin tocar. Ver
+> [`INFORME_FIX_AUDIO_REAL.md`](INFORME_FIX_AUDIO_REAL.md) para el
+> detalle completo.
+>
 > ✅ **Falla de calibración corregida y validada (21/8).** La versión
 > anterior tenía un desajuste entre cómo se entrenaba (por ranking
 > relativo entre las 193 clases) y cómo se usa en producción (umbral
@@ -12,7 +30,7 @@
 >
 > ⚠️ **Corregido (21/8, más tarde): la "confusión Hornero/Kestrel"
 > reportada antes medía la neurona equivocada** (la del catálogo global
-> original, sin tocar por este proyecto — el índice real de las 193
+> original, sin tocar por este proyecto: el índice real de las 193
 > especies reentrenadas no lleva `_NombreComún`). Con la neurona
 > correcta no hay evidencia de confusión fuerte entre estas dos especies;
 > lo que sí parece real es baja sensibilidad de la neurona reentrenada de
