@@ -108,6 +108,33 @@ validación de recall sobre campo real propia; el chequeo existente
 problema de origen (posible Hornero mal identificado por el propio
 baseline) y se toma con cautela.
 
+## 6. Ronda 2: reforzar también las especies "keep" pero limítrofes
+
+Con el pipeline ya armado y validado, se extendió el mismo tratamiento
+a 5 especies que habían quedado del lado "keep_custom" en la decisión
+original pero con retención limítrofe (50-67%, no un colapso total
+pero tampoco un resultado sólido): Patagioenas picazuro, Guira guira,
+Vanellus chilensis, Certhiaxis cinnamomeus, Turdus amaurochalinus.
+Mismo método: embeddings reales de campo como positivos adicionales,
+split 70/30 por clip, partiendo esta vez de los pesos ya corregidos en
+la sección anterior (no de v8), para no perder las mejoras ya hechas.
+
+Resultado en holdout real (nunca visto en entrenamiento):
+
+| Especie | Antes | Ahora |
+|---|---|---|
+| Patagioenas picazuro | 9/40 (22.5%) | 37/40 (92.5%) |
+| Guira guira | 5/12 (41.7%) | 10/12 (83.3%) |
+| Vanellus chilensis | 3/10 (30%) | 7/10 (70%) |
+| Certhiaxis cinnamomeus | 1/8 (12.5%) | 6/8 (75%) |
+| Turdus amaurochalinus | 2/6 (33.3%) | 5/6 (83.3%) |
+
+Total de especies tocadas en toda la sesión: 14 (las 8 de la sección 3,
+más Falco sparverius con refuerzo de negativos, más estas 5). Las
+otras 179 especies quedan byte-idénticas a la versión previa a esta
+sesión (verificado programáticamente contra `pesos_v8_ovr.npz`
+original, no solo contra el paso intermedio).
+
 ## 4. Resultado (holdout real, nunca visto en entrenamiento)
 
 | Especie | Antes (v8) | Ahora | Mejora |

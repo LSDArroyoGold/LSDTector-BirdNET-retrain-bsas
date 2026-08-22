@@ -4,17 +4,19 @@
 > validado (22/8).** El problema no era solo Hornero/Kestrel: al
 > extender el chequeo a más especies con volumen suficiente de
 > detecciones reales, el modelo reentrenado perdía sensibilidad fuerte
-> en 8 de ellas (Hornero, Kiskadee, Chingolo y otras), aunque el
+> en varias de ellas (Hornero, Kiskadee, Chingolo y otras), aunque el
 > catálogo original de BirdNET las detectaba perfecto en esos mismos
 > clips. Se investigó a fondo (banda, ruido, reverb, compresión,
 > distorsión, pipeline, sobreajuste, todo probado y descartado como
 > causa única) hasta encontrar que el audio real de campo corre el
 > embedding interno del modelo en una dirección muy específica que
 > ninguna degradación sintética de Xeno-canto reproduce. Se reentrenaron
-> esas 8 neuronas puntuales con audio real de campo (nunca con
-> Xeno-canto degradado), validado contra un holdout real nunca visto en
-> entrenamiento: las 8 mejoraron, ninguna empeoró, y las otras 185
-> especies quedaron sin tocar. Ver
+> 14 neuronas puntuales con audio real de campo (nunca con Xeno-canto
+> degradado): 8 que habían colapsado del todo, más 5 que estaban
+> "bien" pero limítrofes, más Kestrel con refuerzo de negativos duros
+> reales. Validado contra un holdout real nunca visto en entrenamiento:
+> las 13 especies con positivos nuevos mejoraron, ninguna empeoró, y
+> las otras 179 especies quedaron byte-idénticas, sin tocar. Ver
 > [`INFORME_FIX_AUDIO_REAL.md`](INFORME_FIX_AUDIO_REAL.md) para el
 > detalle completo.
 >
