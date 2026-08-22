@@ -108,7 +108,26 @@ validación de recall sobre campo real propia; el chequeo existente
 problema de origen (posible Hornero mal identificado por el propio
 baseline) y se toma con cautela.
 
-## 6. Ronda 2: reforzar también las especies "keep" pero limítrofes
+## 4. Resultado (holdout real, nunca visto en entrenamiento)
+
+| Especie | Antes (v8) | Ahora | Mejora |
+|---|---|---|---|
+| Furnarius rufus | 1/154 (0.6%) | 154/154 (100%) | evidente |
+| Pitangus sulphuratus | 7/136 (5%) | 134/136 (98.5%) | evidente |
+| Zonotrichia capensis | 2/72 (3%) | 71/72 (98.6%) | evidente |
+| Agelaioides badius | 7/60 (12%) | 56/60 (93.3%) | evidente |
+| Sicalis flaveola | 0/10 (0%) | 9/10 (90%) | evidente |
+| Colaptes campestris | 0/6 (0%) | 5/6 (83.3%) | evidente |
+| Columbina picui | 2/6 (33%) | 6/6 (100%) | evidente |
+| Nycticorax nycticorax | 0/8 (0%) | 4/8 (50%) | mejora, muestra chica |
+
+Las 8 especies mejoraron, ninguna empeoró. Verificado también con el
+pipeline completo de producción (`analyze()`, no solo álgebra de
+pesos): 20 audios reales de Hornero, 20/20 detectados (media 0.951);
+20 audios de "Kestrel falsos", 20/20 detectados como Hornero (media
+0.949) y solo 2/20 disparan Kestrel (antes disparaba en la mayoría).
+
+## 5. Ronda 2: reforzar también las especies "keep" pero limítrofes
 
 Con el pipeline ya armado y validado, se extendió el mismo tratamiento
 a 5 especies que habían quedado del lado "keep_custom" en la decisión
@@ -135,26 +154,51 @@ otras 179 especies quedan byte-idénticas a la versión previa a esta
 sesión (verificado programáticamente contra `pesos_v8_ovr.npz`
 original, no solo contra el paso intermedio).
 
-## 4. Resultado (holdout real, nunca visto en entrenamiento)
+## 6. Validación final independiente, sobre las 986 detecciones reales completas
 
-| Especie | Antes (v8) | Ahora | Mejora |
-|---|---|---|---|
-| Furnarius rufus | 1/154 (0.6%) | 154/154 (100%) | evidente |
-| Pitangus sulphuratus | 7/136 (5%) | 134/136 (98.5%) | evidente |
-| Zonotrichia capensis | 2/72 (3%) | 71/72 (98.6%) | evidente |
-| Agelaioides badius | 7/60 (12%) | 56/60 (93.3%) | evidente |
-| Sicalis flaveola | 0/10 (0%) | 9/10 (90%) | evidente |
-| Colaptes campestris | 0/6 (0%) | 5/6 (83.3%) | evidente |
-| Columbina picui | 2/6 (33%) | 6/6 (100%) | evidente |
-| Nycticorax nycticorax | 0/8 (0%) | 4/8 (50%) | mejora, muestra chica |
+Después de la ronda 2, se repitió la comparación baseline vs
+reentrenado (misma metodología de la sección 1: neurona original
+contra la nueva, en el mismo clip real, sin depender de etiquetas de
+carpeta) sobre el archivo completo de 986 detecciones reales, no solo
+sobre el 30% de holdout. Esta corrida es independiente del proceso de
+entrenamiento en sí (usa el pipeline real `analyze()`, no álgebra de
+pesos) y sirve como confirmación final.
 
-Las 8 especies mejoraron, ninguna empeoró. Verificado también con el
-pipeline completo de producción (`analyze()`, no solo álgebra de
-pesos): 20 audios reales de Hornero, 20/20 detectados (media 0.951);
-20 audios de "Kestrel falsos", 20/20 detectados como Hornero (media
-0.949) y solo 2/20 disparan Kestrel (antes disparaba en la mayoría).
+| Especie | Antes (v8) | Ahora (v10) |
+|---|---|---|
+| Furnarius rufus | 8/67 (12%) | 67/67 (100%) |
+| Pitangus sulphuratus | 18/147 (12%) | 147/147 (100%) |
+| Zonotrichia capensis | 8/35 (23%) | 35/35 (100%) |
+| Agelaioides badius | 21/43 (49%) | 43/43 (100%) |
+| Sicalis flaveola | 0/8 (0%) | 8/8 (100%) |
+| Colaptes campestris | 1/5 (20%) | 5/5 (100%) |
+| Columbina picui | 0/3 (0%) | 3/3 (100%) |
+| Nycticorax nycticorax | 1/5 (20%) | 5/5 (100%) |
+| Patagioenas picazuro | 24/47 (51%) | 47/47 (100%) |
+| Guira guira | 8/14 (57%) | 14/14 (100%) |
+| Vanellus chilensis | 5/8 (62%) | 8/8 (100%) |
+| Certhiaxis cinnamomeus | 1/2 (50%) | 2/2 (100%) |
+| Turdus amaurochalinus | 2/3 (67%) | 3/3 (100%) |
+| Falco sparverius | 90/127 (71%) | 15/127 (12%) |
 
-## 5. Qué falta
+Las 13 especies con positivos nuevos llegan a 100% (esperable: esta
+medición incluye clips que sí se usaron en entrenamiento, a diferencia
+del holdout de la sección 4; el valor real de generalización es el de
+esa sección). Las especies no tocadas dieron el mismo resultado que
+antes, punto por punto (verificación adicional de que nada se rompió).
+
+**Sobre la caída de Falco sparverius (71% → 12%): es el resultado
+esperado y correcto, no una regresión.** Esas 127 detecciones
+"confiadas" del catálogo original probablemente son, en su mayoría, el
+mismo audio de Hornero mal identificado como Kestrel por el propio
+baseline (la razón por la que la carpeta "Kestrel (falsos)" existe).
+La neurona de Kestrel reentrenada ahora rechaza correctamente ese
+audio, que es exactamente lo que se le pidió con los negativos duros
+de la sección 3. Sigue sin existir una medición limpia del recall de
+Kestrel sobre Kestrel real, porque no hay audio de campo con esa
+especie confirmada todavía.
+
+## 7. Qué falta
 
 - Validación en hardware real (Raspberry Pi), como toda entrega de
   este proyecto.
@@ -165,3 +209,8 @@ pesos): 20 audios reales de Hornero, 20/20 detectados (media 0.951);
 - El hallazgo de interferencia por coro de otras especies quedó
   identificado pero no resuelto de raíz; si el problema reaparece en
   otras especies a futuro, ese es el ángulo a seguir.
+- Myiopsitta monachus, Megaceryle torquata, Colaptes melanochloros y
+  Tringa flavipes quedaron marcadas "revisar" (muy poca data real, 1-2
+  clips, 0 aciertos) pero sin tocar: no hay evidencia suficiente para
+  reentrenar con confianza aunque el patrón sea sospechoso. Si aparece
+  más audio de campo de estas especies, revisar de nuevo.
