@@ -1,0 +1,383 @@
+archivo,especie_original,conf_original,propio_score,top1_correcto,top1_label,top1_score
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-04/American_Kestrel/American_Kestrel-53-2026-07-04-birdnet-18_26_01.mp3,American_Kestrel,53,0.8737,False,Furnarius rufus,0.9966
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-05/American_Kestrel/American_Kestrel-57-2026-07-05-birdnet-08_28_12.mp3,American_Kestrel,57,0.0795,False,Furnarius rufus,0.788
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-06/American_Kestrel/American_Kestrel-51-2026-07-06-birdnet-09_15_44.mp3,American_Kestrel,51,0.5501,False,Furnarius rufus,0.9856
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-07/American_Kestrel/American_Kestrel-58-2026-07-07-birdnet-09_33_45.mp3,American_Kestrel,58,0.4278,False,Guira guira,0.9369
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-07/American_Kestrel/American_Kestrel-88-2026-07-07-birdnet-08_32_06.mp3,American_Kestrel,88,0.7633,False,Furnarius rufus,0.9968
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-08/American_Kestrel/American_Kestrel-82-2026-07-08-birdnet-09_08_12.mp3,American_Kestrel,82,0.9251,False,Furnarius rufus,0.9572
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-08/American_Kestrel/American_Kestrel-64-2026-07-08-birdnet-08_32_44.mp3,American_Kestrel,64,0.7975,False,Furnarius rufus,0.9894
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-08/American_Kestrel/American_Kestrel-59-2026-07-08-birdnet-08_56_48.mp3,American_Kestrel,59,0.3564,False,Furnarius rufus,0.9935
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-08/American_Kestrel/American_Kestrel-69-2026-07-08-birdnet-09_24_27.mp3,American_Kestrel,69,0.8985,False,Agelaioides badius,0.967
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-08/American_Kestrel/American_Kestrel-67-2026-07-08-birdnet-09_24_33.mp3,American_Kestrel,67,0.9396,False,Furnarius rufus,0.9543
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-08/American_Kestrel/American_Kestrel-75-2026-07-08-birdnet-08_29_35.mp3,American_Kestrel,75,0.9672,False,Furnarius rufus,0.9988
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-09/American_Kestrel/American_Kestrel-51-2026-07-09-birdnet-08_53_46.mp3,American_Kestrel,51,0.9219,False,Furnarius rufus,0.9835
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-09/American_Kestrel/American_Kestrel-92-2026-07-09-birdnet-08_53_52.mp3,American_Kestrel,92,0.9988,True,Falco sparverius_American Kestrel,0.9988
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-09/American_Kestrel/American_Kestrel-95-2026-07-09-birdnet-08_53_49.mp3,American_Kestrel,95,0.9989,True,Falco sparverius_American Kestrel,0.9989
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-09/American_Kestrel/American_Kestrel-52-2026-07-09-birdnet-09_15_19.mp3,American_Kestrel,52,0.2157,False,Furnarius rufus,0.9888
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-10/American_Kestrel/American_Kestrel-63-2026-07-10-birdnet-08_51_42.mp3,American_Kestrel,63,0.9153,False,Agelaioides badius,0.9371
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-10/American_Kestrel/American_Kestrel-56-2026-07-10-birdnet-09_21_13.mp3,American_Kestrel,56,0.6421,False,Furnarius rufus,0.9517
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-11/American_Kestrel/American_Kestrel-52-2026-07-11-birdnet-08_59_10.mp3,American_Kestrel,52,0.4066,False,Furnarius rufus,0.9512
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-11/American_Kestrel/American_Kestrel-69-2026-07-11-birdnet-08_39_27.mp3,American_Kestrel,69,0.1972,False,Furnarius rufus,0.951
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-12/American_Kestrel/American_Kestrel-51-2026-07-12-birdnet-08_57_29.mp3,American_Kestrel,51,0.0411,False,Furnarius rufus,0.884
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-13/American_Kestrel/American_Kestrel-87-2026-07-13-birdnet-09_00_53.mp3,American_Kestrel,87,0.9918,True,Falco sparverius_American Kestrel,0.9918
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-13/American_Kestrel/American_Kestrel-72-2026-07-13-birdnet-09_58_42.mp3,American_Kestrel,72,0.1802,False,Furnarius rufus,0.9904
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-13/American_Kestrel/American_Kestrel-64-2026-07-13-birdnet-08_41_32.mp3,American_Kestrel,64,0.883,False,Furnarius rufus,0.9975
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-13/American_Kestrel/American_Kestrel-66-2026-07-13-birdnet-09_06_20.mp3,American_Kestrel,66,0.6738,False,Furnarius rufus,0.9602
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-13/American_Kestrel/American_Kestrel-68-2026-07-13-birdnet-08_35_14.mp3,American_Kestrel,68,0.1093,False,Furnarius rufus,0.999
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-13/American_Kestrel/American_Kestrel-76-2026-07-13-birdnet-09_38_51.mp3,American_Kestrel,76,0.2371,False,Furnarius rufus,0.9707
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-14/American_Kestrel/American_Kestrel-73-2026-07-14-birdnet-09_47_11.mp3,American_Kestrel,73,0.994,False,Furnarius rufus,0.9975
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-14/American_Kestrel/American_Kestrel-53-2026-07-14-birdnet-08_39_41.mp3,American_Kestrel,53,0.6435,False,Zonotrichia capensis,0.944
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-14/American_Kestrel/American_Kestrel-65-2026-07-14-birdnet-09_06_11.mp3,American_Kestrel,65,0.8183,False,Furnarius rufus,0.9622
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-14/American_Kestrel/American_Kestrel-67-2026-07-14-birdnet-08_40_23.mp3,American_Kestrel,67,0.8817,False,Furnarius rufus,0.9853
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-15/American_Kestrel/American_Kestrel-52-2026-07-15-birdnet-09_45_23.mp3,American_Kestrel,52,0.5244,False,Furnarius rufus,0.97
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-15/American_Kestrel/American_Kestrel-80-2026-07-15-birdnet-09_45_35.mp3,American_Kestrel,80,0.9628,True,Falco sparverius_American Kestrel,0.9628
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-15/American_Kestrel/American_Kestrel-82-2026-07-15-birdnet-10_07_53.mp3,American_Kestrel,82,0.428,False,Furnarius rufus,0.9987
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-15/American_Kestrel/American_Kestrel-52-2026-07-15-birdnet-09_49_38.mp3,American_Kestrel,52,0.0363,False,Furnarius rufus,0.9143
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-15/American_Kestrel/American_Kestrel-55-2026-07-15-birdnet-09_30_38.mp3,American_Kestrel,55,0.9319,False,Furnarius rufus,0.9717
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-15/American_Kestrel/American_Kestrel-67-2026-07-15-birdnet-09_30_56.mp3,American_Kestrel,67,0.7705,False,Furnarius rufus,0.9956
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-15/American_Kestrel/American_Kestrel-73-2026-07-15-birdnet-09_31_02.mp3,American_Kestrel,73,0.6195,False,Agelaioides badius,0.9992
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-15/American_Kestrel/American_Kestrel-52-2026-07-15-birdnet-08_48_08.mp3,American_Kestrel,52,0.325,False,Furnarius rufus,0.947
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-15/American_Kestrel/American_Kestrel-83-2026-07-15-birdnet-09_45_44.mp3,American_Kestrel,83,0.3074,False,Furnarius rufus,0.9921
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-17/American_Kestrel/American_Kestrel-53-2026-07-17-birdnet-09_01_25.mp3,American_Kestrel,53,0.1581,False,Furnarius rufus,0.9746
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-17/American_Kestrel/American_Kestrel-76-2026-07-17-birdnet-08_59_31.mp3,American_Kestrel,76,0.872,False,Furnarius rufus,0.9958
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-17/American_Kestrel/American_Kestrel-95-2026-07-17-birdnet-09_52_26.mp3,American_Kestrel,95,0.9943,True,Falco sparverius_American Kestrel,0.9943
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-17/American_Kestrel/American_Kestrel-84-2026-07-17-birdnet-09_46_52.mp3,American_Kestrel,84,0.7071,False,Furnarius rufus,0.7577
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-22/American_Kestrel/American_Kestrel-77-2026-07-22-birdnet-12_50_31.mp3,American_Kestrel,77,0.4454,False,Furnarius rufus,0.992
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-22/American_Kestrel/American_Kestrel-69-2026-07-22-birdnet-14_20_51.mp3,American_Kestrel,69,0.9847,False,Furnarius rufus,0.9893
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-22/American_Kestrel/American_Kestrel-57-2026-07-22-birdnet-09_14_06.mp3,American_Kestrel,57,0.9424,False,Furnarius rufus,0.9983
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-23/American_Kestrel/American_Kestrel-64-2026-07-23-birdnet-14_49_14.mp3,American_Kestrel,64,0.4666,False,Furnarius rufus,0.9945
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-25/American_Kestrel/American_Kestrel-86-2026-07-25-birdnet-12_55_00.mp3,American_Kestrel,86,0.9781,True,Falco sparverius_American Kestrel,0.9781
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-25/American_Kestrel/American_Kestrel-57-2026-07-25-birdnet-16_43_10.mp3,American_Kestrel,57,0.8852,False,Furnarius rufus,0.9944
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-25/American_Kestrel/American_Kestrel-57-2026-07-25-birdnet-12_10_30.mp3,American_Kestrel,57,0.8897,False,Furnarius rufus,0.993
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-25/American_Kestrel/American_Kestrel-92-2026-07-25-birdnet-14_16_33.mp3,American_Kestrel,92,0.923,False,Furnarius rufus,0.9986
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-25/American_Kestrel/American_Kestrel-57-2026-07-25-birdnet-17_09_42.mp3,American_Kestrel,57,0.5946,False,Furnarius rufus,0.9934
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-25/American_Kestrel/American_Kestrel-75-2026-07-25-birdnet-16_07_04.mp3,American_Kestrel,75,0.2513,False,Furnarius rufus,0.9846
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-25/American_Kestrel/American_Kestrel-60-2026-07-25-birdnet-09_57_22.mp3,American_Kestrel,60,0.0351,False,Furnarius rufus,0.9054
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-25/American_Kestrel/American_Kestrel-78-2026-07-25-birdnet-12_23_24.mp3,American_Kestrel,78,0.554,False,Furnarius rufus,0.9806
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-25/American_Kestrel/American_Kestrel-55-2026-07-25-birdnet-08_13_38.mp3,American_Kestrel,55,0.3109,False,Furnarius rufus,0.9471
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-25/American_Kestrel/American_Kestrel-50-2026-07-25-birdnet-14_32_09.mp3,American_Kestrel,50,0.0697,False,Agelaioides badius,1.0
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-25/American_Kestrel/American_Kestrel-82-2026-07-25-birdnet-17_09_57.mp3,American_Kestrel,82,0.3142,False,Zonotrichia capensis,0.8282
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-25/American_Kestrel/American_Kestrel-57-2026-07-25-birdnet-08_53_14.mp3,American_Kestrel,57,0.0051,False,Furnarius rufus,0.9725
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-25/American_Kestrel/American_Kestrel-68-2026-07-25-birdnet-16_21_55.mp3,American_Kestrel,68,0.8976,False,Furnarius rufus,0.9725
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-25/American_Kestrel/American_Kestrel-60-2026-07-25-birdnet-13_29_00.mp3,American_Kestrel,60,0.4064,False,Furnarius rufus,0.9981
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-25/American_Kestrel/American_Kestrel-56-2026-07-25-birdnet-09_18_23.mp3,American_Kestrel,56,0.1067,False,Furnarius rufus,0.9876
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-08-15/American_Kestrel/American_Kestrel-69-2026-08-15-birdnet-07_53_25.mp3,American_Kestrel,69,0.5946,False,Furnarius rufus,0.9612
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-08-16/American_Kestrel/American_Kestrel-56-2026-08-16-birdnet-08_33_18.mp3,American_Kestrel,56,0.0654,False,Furnarius rufus,0.9484
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-08-17/American_Kestrel/American_Kestrel-63-2026-08-17-birdnet-08_48_42.mp3,American_Kestrel,63,0.7158,False,Furnarius rufus,0.9674
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-08-17/American_Kestrel/American_Kestrel-76-2026-08-17-birdnet-08_25_42.mp3,American_Kestrel,76,0.609,False,Furnarius rufus,0.9365
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-08-18/American_Kestrel/American_Kestrel-54-2026-08-18-birdnet-09_05_52.mp3,American_Kestrel,54,0.7164,False,Guira guira,0.9969
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-08-18/American_Kestrel/American_Kestrel-62-2026-08-18-birdnet-08_49_10.mp3,American_Kestrel,62,0.7663,False,Furnarius rufus,0.9399
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-08-19/American_Kestrel/American_Kestrel-52-2026-08-19-birdnet-08_09_55.mp3,American_Kestrel,52,0.2631,False,Furnarius rufus,0.969
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-08-19/American_Kestrel/American_Kestrel-60-2026-08-19-birdnet-07_53_55.mp3,American_Kestrel,60,0.702,False,Furnarius rufus,0.9991
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-08-19/American_Kestrel/American_Kestrel-56-2026-08-19-birdnet-08_12_52.mp3,American_Kestrel,56,0.7633,False,Furnarius rufus,0.9837
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-08-19/American_Kestrel/American_Kestrel-84-2026-08-19-birdnet-08_18_31.mp3,American_Kestrel,84,0.106,False,Furnarius rufus,0.9631
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-08-19/American_Kestrel/American_Kestrel-51-2026-08-19-birdnet-08_01_55.mp3,American_Kestrel,51,0.931,False,Furnarius rufus,0.9959
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-08-20/American_Kestrel/American_Kestrel-59-2026-08-20-birdnet-08_28_28.mp3,American_Kestrel,59,0.4528,False,Zonotrichia capensis,0.9965
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-08-20/American_Kestrel/American_Kestrel-56-2026-08-20-birdnet-09_11_11.mp3,American_Kestrel,56,0.8282,False,Furnarius rufus,0.9719
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-08-20/American_Kestrel/American_Kestrel-75-2026-08-20-birdnet-08_07_40.mp3,American_Kestrel,75,0.9696,False,Furnarius rufus,0.9941
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-08-20/American_Kestrel/American_Kestrel-58-2026-08-20-birdnet-08_28_25.mp3,American_Kestrel,58,0.4186,False,Furnarius rufus,0.9448
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-08-20/American_Kestrel/American_Kestrel-60-2026-08-20-birdnet-09_06_41.mp3,American_Kestrel,60,0.3448,False,Furnarius rufus,0.9765
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-08-21/American_Kestrel/American_Kestrel-74-2026-08-21-birdnet-08_20_25.mp3,American_Kestrel,74,0.9836,False,Furnarius rufus,0.9844
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-08-21/American_Kestrel/American_Kestrel-51-2026-08-21-birdnet-08_49_19.mp3,American_Kestrel,51,0.7301,False,Furnarius rufus,0.9934
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-08-19/Black-bellied_Plover/Black-bellied_Plover-57-2026-08-19-birdnet-18_54_26.mp3,Black-bellied_Plover,57,0.0268,False,Megascops choliba,0.756
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-05/Black-crowned_Night-Heron/Black-crowned_Night-Heron-77-2026-07-05-birdnet-08_28_09.mp3,Black-crowned_Night-Heron,77,0.0447,False,Zonotrichia capensis,0.9302
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-11/Buff-browed_Foliage-gleaner/Buff-browed_Foliage-gleaner-52-2026-07-11-birdnet-08_24_57.mp3,Buff-browed_Foliage-gleaner,52,0.4346,False,Furnarius rufus,0.9714
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-15/Buff-browed_Foliage-gleaner/Buff-browed_Foliage-gleaner-58-2026-07-15-birdnet-10_20_26.mp3,Buff-browed_Foliage-gleaner,58,0.7023,False,Guira guira,0.9891
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-11/Campo_Flicker/Campo_Flicker-63-2026-07-11-birdnet-10_11_43.mp3,Campo_Flicker,63,0.8857,True,Colaptes campestris,0.8857
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-06-22/Chalk-browed_Mockingbird/Chalk-browed_Mockingbird-50-2026-06-22-birdnet-12_44_08.mp3,Chalk-browed_Mockingbird,50,0.4404,True,Mimus saturninus_Chalk-browed Mockingbird,0.4404
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-04/Creamy-bellied_Thrush/Creamy-bellied_Thrush-50-2026-07-04-birdnet-18_27_19.mp3,Creamy-bellied_Thrush,50,0.6849,False,Guira guira,0.8623
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-04/Golden-crowned_Warbler/Golden-crowned_Warbler-53-2026-07-04-birdnet-18_23_55.mp3,Golden-crowned_Warbler,53,0.9972,True,Basileuterus culicivorus,0.9972
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-04/Golden-crowned_Warbler/Golden-crowned_Warbler-72-2026-07-04-birdnet-18_23_52.mp3,Golden-crowned_Warbler,72,0.9958,True,Basileuterus culicivorus,0.9958
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-13/Gray-cowled_Wood-Rail/Gray-cowled_Wood-Rail-53-2026-07-13-birdnet-09_27_21.mp3,Gray-cowled_Wood-Rail,53,0.0395,False,Pitangus sulphuratus,0.9727
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-25/Gray-cowled_Wood-Rail/Gray-cowled_Wood-Rail-55-2026-07-25-birdnet-08_44_08.mp3,Gray-cowled_Wood-Rail,55,0.0039,False,Zonotrichia capensis,0.9849
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-08-16/Gray-cowled_Wood-Rail/Gray-cowled_Wood-Rail-95-2026-08-16-birdnet-07_40_36.mp3,Gray-cowled_Wood-Rail,95,0.9946,True,Aramides cajaneus_Gray-cowled Wood-Rail,0.9946
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-08-16/Gray-cowled_Wood-Rail/Gray-cowled_Wood-Rail-96-2026-08-16-birdnet-07_46_27.mp3,Gray-cowled_Wood-Rail,96,0.9973,True,Aramides cajaneus_Gray-cowled Wood-Rail,0.9973
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-08-16/Gray-cowled_Wood-Rail/Gray-cowled_Wood-Rail-94-2026-08-16-birdnet-07_46_24.mp3,Gray-cowled_Wood-Rail,94,0.985,True,Aramides cajaneus_Gray-cowled Wood-Rail,0.985
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-08-20/Gray-cowled_Wood-Rail/Gray-cowled_Wood-Rail-98-2026-08-20-birdnet-08_07_25.mp3,Gray-cowled_Wood-Rail,98,0.9981,True,Aramides cajaneus_Gray-cowled Wood-Rail,0.9981
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-08-20/Gray-cowled_Wood-Rail/Gray-cowled_Wood-Rail-94-2026-08-20-birdnet-08_07_28.mp3,Gray-cowled_Wood-Rail,94,0.9986,True,Aramides cajaneus,0.9986
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-08-20/Gray-cowled_Wood-Rail/Gray-cowled_Wood-Rail-95-2026-08-20-birdnet-08_07_31.mp3,Gray-cowled_Wood-Rail,95,0.9888,True,Aramides cajaneus_Gray-cowled Wood-Rail,0.9888
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-08-20/Gray-cowled_Wood-Rail/Gray-cowled_Wood-Rail-93-2026-08-20-birdnet-07_57_52.mp3,Gray-cowled_Wood-Rail,93,0.7692,False,Zonotrichia capensis,0.9748
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-08-20/Gray-cowled_Wood-Rail/Gray-cowled_Wood-Rail-92-2026-08-20-birdnet-07_57_58.mp3,Gray-cowled_Wood-Rail,92,0.999,True,Aramides cajaneus_Gray-cowled Wood-Rail,0.999
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-08-20/Gray-cowled_Wood-Rail/Gray-cowled_Wood-Rail-98-2026-08-20-birdnet-07_57_55.mp3,Gray-cowled_Wood-Rail,98,0.9998,True,Aramides cajaneus_Gray-cowled Wood-Rail,0.9998
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-05/Grayish_Baywing/Grayish_Baywing-53-2026-07-05-birdnet-10_00_16.mp3,Grayish_Baywing,53,1.0,True,Agelaioides badius,1.0
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-05/Grayish_Baywing/Grayish_Baywing-50-2026-07-05-birdnet-08_52_07.mp3,Grayish_Baywing,50,1.0,True,Agelaioides badius,1.0
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-07/Grayish_Baywing/Grayish_Baywing-55-2026-07-07-birdnet-09_03_54.mp3,Grayish_Baywing,55,0.9999,True,Agelaioides badius,0.9999
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-08/Grayish_Baywing/Grayish_Baywing-59-2026-07-08-birdnet-09_57_54.mp3,Grayish_Baywing,59,0.9996,True,Agelaioides badius,0.9996
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-09/Grayish_Baywing/Grayish_Baywing-56-2026-07-09-birdnet-08_28_37.mp3,Grayish_Baywing,56,0.9999,True,Agelaioides badius,0.9999
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-10/Grayish_Baywing/Grayish_Baywing-54-2026-07-10-birdnet-08_42_21.mp3,Grayish_Baywing,54,1.0,True,Agelaioides badius,1.0
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-10/Grayish_Baywing/Grayish_Baywing-57-2026-07-10-birdnet-08_41_51.mp3,Grayish_Baywing,57,1.0,True,Agelaioides badius,1.0
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-10/Grayish_Baywing/Grayish_Baywing-58-2026-07-10-birdnet-08_43_09.mp3,Grayish_Baywing,58,0.9999,True,Agelaioides badius,0.9999
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-12/Grayish_Baywing/Grayish_Baywing-54-2026-07-12-birdnet-09_34_41.mp3,Grayish_Baywing,54,0.9999,True,Agelaioides badius,0.9999
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-12/Grayish_Baywing/Grayish_Baywing-61-2026-07-12-birdnet-09_18_11.mp3,Grayish_Baywing,61,0.9995,True,Agelaioides badius,0.9995
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-12/Grayish_Baywing/Grayish_Baywing-52-2026-07-12-birdnet-09_00_11.mp3,Grayish_Baywing,52,1.0,True,Agelaioides badius,1.0
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-13/Grayish_Baywing/Grayish_Baywing-52-2026-07-13-birdnet-08_55_35.mp3,Grayish_Baywing,52,0.9958,True,Agelaioides badius,0.9958
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-15/Grayish_Baywing/Grayish_Baywing-60-2026-07-15-birdnet-08_43_23.mp3,Grayish_Baywing,60,0.9996,True,Agelaioides badius,0.9996
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-15/Grayish_Baywing/Grayish_Baywing-50-2026-07-15-birdnet-08_43_38.mp3,Grayish_Baywing,50,0.9999,True,Agelaioides badius,0.9999
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-22/Grayish_Baywing/Grayish_Baywing-50-2026-07-22-birdnet-11_56_22.mp3,Grayish_Baywing,50,0.9997,True,Agelaioides badius,0.9997
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-25/Grayish_Baywing/Grayish_Baywing-50-2026-07-25-birdnet-08_13_05.mp3,Grayish_Baywing,50,1.0,True,Agelaioides badius,1.0
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-08-15/Grayish_Baywing/Grayish_Baywing-52-2026-08-15-birdnet-08_49_41.mp3,Grayish_Baywing,52,0.9983,True,Agelaioides badius,0.9983
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-08-15/Grayish_Baywing/Grayish_Baywing-64-2026-08-15-birdnet-08_49_47.mp3,Grayish_Baywing,64,1.0,True,Agelaioides badius,1.0
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-08-15/Grayish_Baywing/Grayish_Baywing-59-2026-08-15-birdnet-08_50_56.mp3,Grayish_Baywing,59,0.9974,True,Agelaioides badius,0.9974
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-08-16/Grayish_Baywing/Grayish_Baywing-64-2026-08-16-birdnet-07_34_21.mp3,Grayish_Baywing,64,1.0,True,Agelaioides badius,1.0
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-08-16/Grayish_Baywing/Grayish_Baywing-61-2026-08-16-birdnet-07_50_30.mp3,Grayish_Baywing,61,1.0,True,Agelaioides badius,1.0
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-08-16/Grayish_Baywing/Grayish_Baywing-60-2026-08-16-birdnet-07_33_03.mp3,Grayish_Baywing,60,1.0,True,Agelaioides badius,1.0
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-08-17/Grayish_Baywing/Grayish_Baywing-66-2026-08-17-birdnet-08_00_18.mp3,Grayish_Baywing,66,1.0,True,Agelaioides badius,1.0
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-08-17/Grayish_Baywing/Grayish_Baywing-57-2026-08-17-birdnet-07_55_00.mp3,Grayish_Baywing,57,1.0,True,Agelaioides badius,1.0
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-08-17/Grayish_Baywing/Grayish_Baywing-54-2026-08-17-birdnet-08_00_45.mp3,Grayish_Baywing,54,1.0,True,Agelaioides badius,1.0
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-08-17/Grayish_Baywing/Grayish_Baywing-87-2026-08-17-birdnet-08_00_09.mp3,Grayish_Baywing,87,1.0,True,Agelaioides badius,1.0
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-08-17/Grayish_Baywing/Grayish_Baywing-64-2026-08-17-birdnet-08_00_12.mp3,Grayish_Baywing,64,1.0,True,Agelaioides badius,1.0
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-08-17/Grayish_Baywing/Grayish_Baywing-60-2026-08-17-birdnet-07_54_54.mp3,Grayish_Baywing,60,1.0,True,Agelaioides badius,1.0
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-08-17/Grayish_Baywing/Grayish_Baywing-75-2026-08-17-birdnet-07_54_57.mp3,Grayish_Baywing,75,1.0,True,Agelaioides badius,1.0
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-08-18/Grayish_Baywing/Grayish_Baywing-64-2026-08-18-birdnet-08_08_04.mp3,Grayish_Baywing,64,0.9995,True,Agelaioides badius,0.9995
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-08-18/Grayish_Baywing/Grayish_Baywing-54-2026-08-18-birdnet-08_08_19.mp3,Grayish_Baywing,54,1.0,True,Agelaioides badius,1.0
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-08-18/Grayish_Baywing/Grayish_Baywing-56-2026-08-18-birdnet-08_07_37.mp3,Grayish_Baywing,56,1.0,True,Agelaioides badius,1.0
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-08-18/Grayish_Baywing/Grayish_Baywing-66-2026-08-18-birdnet-08_07_34.mp3,Grayish_Baywing,66,1.0,True,Agelaioides badius,1.0
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-08-18/Grayish_Baywing/Grayish_Baywing-58-2026-08-18-birdnet-08_01_40.mp3,Grayish_Baywing,58,1.0,True,Agelaioides badius,1.0
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-08-18/Grayish_Baywing/Grayish_Baywing-65-2026-08-18-birdnet-08_19_40.mp3,Grayish_Baywing,65,1.0,True,Agelaioides badius,1.0
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-08-19/Grayish_Baywing/Grayish_Baywing-53-2026-08-19-birdnet-07_50_00.mp3,Grayish_Baywing,53,1.0,True,Agelaioides badius,1.0
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-08-21/Grayish_Baywing/Grayish_Baywing-51-2026-08-21-birdnet-08_36_58.mp3,Grayish_Baywing,51,1.0,True,Agelaioides badius,1.0
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-08-21/Grayish_Baywing/Grayish_Baywing-66-2026-08-21-birdnet-08_36_13.mp3,Grayish_Baywing,66,1.0,True,Agelaioides badius,1.0
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2000-01-01/Great_Kiskadee/Great_Kiskadee-96-2000-01-01-birdnet-01_05_46.mp3,Great_Kiskadee,96,0.9934,True,Pitangus sulphuratus_Great Kiskadee,0.9934
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2000-01-01/Great_Kiskadee/Great_Kiskadee-85-2000-01-01-birdnet-00_02_34.mp3,Great_Kiskadee,85,0.9304,True,Pitangus sulphuratus_Great Kiskadee,0.9304
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2000-01-01/Great_Kiskadee/Great_Kiskadee-93-2000-01-01-birdnet-03_29_58.mp3,Great_Kiskadee,93,0.977,True,Pitangus sulphuratus_Great Kiskadee,0.977
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2000-01-01/Great_Kiskadee/Great_Kiskadee-98-2000-01-01-birdnet-03_30_01.mp3,Great_Kiskadee,98,0.9737,True,Pitangus sulphuratus,0.9737
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2000-01-01/Great_Kiskadee/Great_Kiskadee-93-2000-01-01-birdnet-03_30_04.mp3,Great_Kiskadee,93,0.9888,True,Pitangus sulphuratus_Great Kiskadee,0.9888
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-04-13/Great_Kiskadee/Great_Kiskadee-95-2026-04-13-birdnet-15_43_31.mp3,Great_Kiskadee,95,0.991,True,Pitangus sulphuratus_Great Kiskadee,0.991
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-04-13/Great_Kiskadee/Great_Kiskadee-98-2026-04-13-birdnet-20_14_54.mp3,Great_Kiskadee,98,0.9946,True,Pitangus sulphuratus_Great Kiskadee,0.9946
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-04-13/Great_Kiskadee/Great_Kiskadee-96-2026-04-13-birdnet-16_47_46.mp3,Great_Kiskadee,96,0.9908,True,Pitangus sulphuratus_Great Kiskadee,0.9908
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-04-13/Great_Kiskadee/Great_Kiskadee-90-2026-04-13-birdnet-16_50_26.mp3,Great_Kiskadee,90,0.9715,True,Pitangus sulphuratus,0.9715
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-04-13/Great_Kiskadee/Great_Kiskadee-94-2026-04-13-birdnet-16_49_05.mp3,Great_Kiskadee,94,0.8739,True,Pitangus sulphuratus,0.8739
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-04-13/Great_Kiskadee/Great_Kiskadee-81-2026-04-13-birdnet-15_43_37.mp3,Great_Kiskadee,81,0.9163,True,Pitangus sulphuratus_Great Kiskadee,0.9163
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-04-13/Great_Kiskadee/Great_Kiskadee-77-2026-04-13-birdnet-20_14_57.mp3,Great_Kiskadee,77,0.9172,True,Pitangus sulphuratus_Great Kiskadee,0.9172
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-04-16/Great_Kiskadee/Great_Kiskadee-93-2026-04-16-birdnet-17_10_18.mp3,Great_Kiskadee,93,0.9607,True,Pitangus sulphuratus_Great Kiskadee,0.9607
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-04-16/Great_Kiskadee/Great_Kiskadee-96-2026-04-16-birdnet-17_10_15.mp3,Great_Kiskadee,96,0.9978,True,Pitangus sulphuratus_Great Kiskadee,0.9978
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-04-20/Great_Kiskadee/Great_Kiskadee-88-2026-04-20-birdnet-12_51_04.mp3,Great_Kiskadee,88,0.9929,True,Pitangus sulphuratus_Great Kiskadee,0.9929
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-04-20/Great_Kiskadee/Great_Kiskadee-99-2026-04-20-birdnet-12_51_07.mp3,Great_Kiskadee,99,0.9918,True,Pitangus sulphuratus_Great Kiskadee,0.9918
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-04-23/Great_Kiskadee/Great_Kiskadee-91-2026-04-23-birdnet-12_17_31.mp3,Great_Kiskadee,91,0.9925,True,Pitangus sulphuratus_Great Kiskadee,0.9925
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-04-23/Great_Kiskadee/Great_Kiskadee-95-2026-04-23-birdnet-12_17_34.mp3,Great_Kiskadee,95,0.9951,True,Pitangus sulphuratus_Great Kiskadee,0.9951
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-04-23/Great_Kiskadee/Great_Kiskadee-96-2026-04-23-birdnet-12_16_34.mp3,Great_Kiskadee,96,0.9877,True,Pitangus sulphuratus_Great Kiskadee,0.9877
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-04-23/Great_Kiskadee/Great_Kiskadee-90-2026-04-23-birdnet-12_17_37.mp3,Great_Kiskadee,90,0.951,True,Pitangus sulphuratus_Great Kiskadee,0.951
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-04-23/Great_Kiskadee/Great_Kiskadee-86-2026-04-23-birdnet-12_17_19.mp3,Great_Kiskadee,86,0.9895,True,Pitangus sulphuratus_Great Kiskadee,0.9895
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-05-04/Great_Kiskadee/Great_Kiskadee-83-2026-05-04-birdnet-16_54_40.mp3,Great_Kiskadee,83,0.9323,True,Pitangus sulphuratus_Great Kiskadee,0.9323
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-05-04/Great_Kiskadee/Great_Kiskadee-94-2026-05-04-birdnet-16_54_43.mp3,Great_Kiskadee,94,0.9583,True,Pitangus sulphuratus_Great Kiskadee,0.9583
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-05-21/Great_Kiskadee/Great_Kiskadee-96-2026-05-21-birdnet-12_43_13.mp3,Great_Kiskadee,96,0.9807,True,Pitangus sulphuratus_Great Kiskadee,0.9807
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-05-27/Great_Kiskadee/Great_Kiskadee-99-2026-05-27-birdnet-18_30_05.mp3,Great_Kiskadee,99,0.9618,True,Pitangus sulphuratus_Great Kiskadee,0.9618
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-05-27/Great_Kiskadee/Great_Kiskadee-80-2026-05-27-birdnet-18_30_14.mp3,Great_Kiskadee,80,0.9674,True,Pitangus sulphuratus_Great Kiskadee,0.9674
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-05-27/Great_Kiskadee/Great_Kiskadee-84-2026-05-27-birdnet-18_30_17.mp3,Great_Kiskadee,84,0.9503,True,Pitangus sulphuratus_Great Kiskadee,0.9503
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-05-27/Great_Kiskadee/Great_Kiskadee-82-2026-05-27-birdnet-18_30_08.mp3,Great_Kiskadee,82,0.9815,True,Pitangus sulphuratus_Great Kiskadee,0.9815
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-05-27/Great_Kiskadee/Great_Kiskadee-76-2026-05-27-birdnet-18_30_11.mp3,Great_Kiskadee,76,0.9366,True,Pitangus sulphuratus_Great Kiskadee,0.9366
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-06/Great_Kiskadee/Great_Kiskadee-65-2026-07-06-birdnet-10_18_24.mp3,Great_Kiskadee,65,0.9738,False,Zonotrichia capensis,0.9951
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-07/Great_Kiskadee/Great_Kiskadee-60-2026-07-07-birdnet-08_37_21.mp3,Great_Kiskadee,60,0.9986,True,Pitangus sulphuratus,0.9986
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-07/Great_Kiskadee/Great_Kiskadee-56-2026-07-07-birdnet-08_36_06.mp3,Great_Kiskadee,56,0.9935,True,Pitangus sulphuratus,0.9935
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-07/Great_Kiskadee/Great_Kiskadee-55-2026-07-07-birdnet-08_38_42.mp3,Great_Kiskadee,55,0.8035,True,Pitangus sulphuratus,0.8035
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-07/Great_Kiskadee/Great_Kiskadee-69-2026-07-07-birdnet-08_36_15.mp3,Great_Kiskadee,69,0.9632,True,Pitangus sulphuratus,0.9632
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-07/Great_Kiskadee/Great_Kiskadee-73-2026-07-07-birdnet-08_38_21.mp3,Great_Kiskadee,73,0.9864,True,Pitangus sulphuratus,0.9864
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-07/Great_Kiskadee/Great_Kiskadee-80-2026-07-07-birdnet-08_37_24.mp3,Great_Kiskadee,80,0.9946,True,Pitangus sulphuratus,0.9946
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-07/Great_Kiskadee/Great_Kiskadee-52-2026-07-07-birdnet-08_38_24.mp3,Great_Kiskadee,52,0.991,True,Pitangus sulphuratus,0.991
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-07/Great_Kiskadee/Great_Kiskadee-61-2026-07-07-birdnet-10_14_00.mp3,Great_Kiskadee,61,0.9978,True,Pitangus sulphuratus,0.9978
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-07/Great_Kiskadee/Great_Kiskadee-57-2026-07-07-birdnet-08_37_27.mp3,Great_Kiskadee,57,0.985,True,Pitangus sulphuratus,0.985
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-07/Great_Kiskadee/Great_Kiskadee-53-2026-07-07-birdnet-08_38_09.mp3,Great_Kiskadee,53,0.995,True,Pitangus sulphuratus,0.995
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-07/Great_Kiskadee/Great_Kiskadee-51-2026-07-07-birdnet-10_14_33.mp3,Great_Kiskadee,51,0.9963,True,Pitangus sulphuratus,0.9963
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-07/Great_Kiskadee/Great_Kiskadee-62-2026-07-07-birdnet-08_38_27.mp3,Great_Kiskadee,62,0.9753,True,Pitangus sulphuratus,0.9753
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-07/Great_Kiskadee/Great_Kiskadee-65-2026-07-07-birdnet-08_38_18.mp3,Great_Kiskadee,65,0.9921,True,Pitangus sulphuratus,0.9921
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-08/Great_Kiskadee/Great_Kiskadee-77-2026-07-08-birdnet-10_04_12.mp3,Great_Kiskadee,77,0.9885,False,Agelaioides badius,0.9972
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-08/Great_Kiskadee/Great_Kiskadee-72-2026-07-08-birdnet-10_17_00.mp3,Great_Kiskadee,72,0.9708,True,Pitangus sulphuratus,0.9708
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-08/Great_Kiskadee/Great_Kiskadee-70-2026-07-08-birdnet-10_14_30.mp3,Great_Kiskadee,70,0.9956,True,Pitangus sulphuratus,0.9956
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-08/Great_Kiskadee/Great_Kiskadee-69-2026-07-08-birdnet-10_04_15.mp3,Great_Kiskadee,69,0.9918,False,Bubulcus ibis,0.9991
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-09/Great_Kiskadee/Great_Kiskadee-64-2026-07-09-birdnet-08_54_25.mp3,Great_Kiskadee,64,0.997,True,Pitangus sulphuratus,0.997
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-09/Great_Kiskadee/Great_Kiskadee-68-2026-07-09-birdnet-08_45_40.mp3,Great_Kiskadee,68,0.9896,False,Agelaioides badius,0.9932
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-09/Great_Kiskadee/Great_Kiskadee-51-2026-07-09-birdnet-10_12_08.mp3,Great_Kiskadee,51,0.98,True,Pitangus sulphuratus,0.98
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-09/Great_Kiskadee/Great_Kiskadee-54-2026-07-09-birdnet-10_12_05.mp3,Great_Kiskadee,54,0.9945,True,Pitangus sulphuratus,0.9945
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-10/Great_Kiskadee/Great_Kiskadee-71-2026-07-10-birdnet-09_00_37.mp3,Great_Kiskadee,71,0.9855,True,Pitangus sulphuratus,0.9855
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-10/Great_Kiskadee/Great_Kiskadee-79-2026-07-10-birdnet-09_05_13.mp3,Great_Kiskadee,79,0.9866,True,Pitangus sulphuratus,0.9866
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-10/Great_Kiskadee/Great_Kiskadee-75-2026-07-10-birdnet-08_58_54.mp3,Great_Kiskadee,75,0.9321,True,Pitangus sulphuratus,0.9321
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-10/Great_Kiskadee/Great_Kiskadee-83-2026-07-10-birdnet-09_20_40.mp3,Great_Kiskadee,83,0.9716,True,Pitangus sulphuratus,0.9716
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-10/Great_Kiskadee/Great_Kiskadee-61-2026-07-10-birdnet-09_00_34.mp3,Great_Kiskadee,61,0.9956,True,Pitangus sulphuratus,0.9956
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-10/Great_Kiskadee/Great_Kiskadee-87-2026-07-10-birdnet-09_00_12.mp3,Great_Kiskadee,87,0.9785,True,Pitangus sulphuratus,0.9785
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-10/Great_Kiskadee/Great_Kiskadee-67-2026-07-10-birdnet-09_04_04.mp3,Great_Kiskadee,67,0.997,True,Pitangus sulphuratus,0.997
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-10/Great_Kiskadee/Great_Kiskadee-50-2026-07-10-birdnet-08_58_28.mp3,Great_Kiskadee,50,0.9894,True,Pitangus sulphuratus,0.9894
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-10/Great_Kiskadee/Great_Kiskadee-50-2026-07-10-birdnet-09_04_43.mp3,Great_Kiskadee,50,0.983,True,Pitangus sulphuratus,0.983
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-11/Great_Kiskadee/Great_Kiskadee-71-2026-07-11-birdnet-08_56_27.mp3,Great_Kiskadee,71,0.9928,True,Pitangus sulphuratus,0.9928
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-11/Great_Kiskadee/Great_Kiskadee-59-2026-07-11-birdnet-08_36_54.mp3,Great_Kiskadee,59,0.9561,True,Pitangus sulphuratus,0.9561
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-11/Great_Kiskadee/Great_Kiskadee-58-2026-07-11-birdnet-08_23_03.mp3,Great_Kiskadee,58,0.9775,True,Pitangus sulphuratus,0.9775
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-11/Great_Kiskadee/Great_Kiskadee-60-2026-07-11-birdnet-09_12_31.mp3,Great_Kiskadee,60,0.9631,False,Furnarius rufus,0.9703
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-11/Great_Kiskadee/Great_Kiskadee-75-2026-07-11-birdnet-08_57_21.mp3,Great_Kiskadee,75,0.9922,True,Pitangus sulphuratus,0.9922
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-11/Great_Kiskadee/Great_Kiskadee-51-2026-07-11-birdnet-08_34_39.mp3,Great_Kiskadee,51,0.9932,True,Pitangus sulphuratus,0.9932
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-11/Great_Kiskadee/Great_Kiskadee-84-2026-07-11-birdnet-08_56_24.mp3,Great_Kiskadee,84,0.9632,False,Guira guira,0.9934
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-11/Great_Kiskadee/Great_Kiskadee-77-2026-07-11-birdnet-08_33_54.mp3,Great_Kiskadee,77,0.9819,True,Pitangus sulphuratus,0.9819
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-11/Great_Kiskadee/Great_Kiskadee-59-2026-07-11-birdnet-08_56_36.mp3,Great_Kiskadee,59,0.9712,True,Pitangus sulphuratus,0.9712
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-11/Great_Kiskadee/Great_Kiskadee-73-2026-07-11-birdnet-10_08_58.mp3,Great_Kiskadee,73,0.9961,True,Pitangus sulphuratus,0.9961
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-11/Great_Kiskadee/Great_Kiskadee-52-2026-07-11-birdnet-09_27_49.mp3,Great_Kiskadee,52,0.998,True,Pitangus sulphuratus,0.998
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-12/Great_Kiskadee/Great_Kiskadee-86-2026-07-12-birdnet-10_20_35.mp3,Great_Kiskadee,86,0.9986,True,Pitangus sulphuratus,0.9986
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-12/Great_Kiskadee/Great_Kiskadee-65-2026-07-12-birdnet-10_20_53.mp3,Great_Kiskadee,65,0.967,True,Pitangus sulphuratus,0.967
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-13/Great_Kiskadee/Great_Kiskadee-76-2026-07-13-birdnet-08_26_26.mp3,Great_Kiskadee,76,0.9924,True,Pitangus sulphuratus,0.9924
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-13/Great_Kiskadee/Great_Kiskadee-54-2026-07-13-birdnet-08_26_44.mp3,Great_Kiskadee,54,0.998,True,Pitangus sulphuratus,0.998
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-13/Great_Kiskadee/Great_Kiskadee-75-2026-07-13-birdnet-08_26_32.mp3,Great_Kiskadee,75,0.9899,True,Pitangus sulphuratus,0.9899
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-13/Great_Kiskadee/Great_Kiskadee-70-2026-07-13-birdnet-08_26_38.mp3,Great_Kiskadee,70,0.9666,True,Pitangus sulphuratus,0.9666
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-13/Great_Kiskadee/Great_Kiskadee-62-2026-07-13-birdnet-10_21_42.mp3,Great_Kiskadee,62,0.9918,True,Pitangus sulphuratus,0.9918
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-13/Great_Kiskadee/Great_Kiskadee-64-2026-07-13-birdnet-08_26_47.mp3,Great_Kiskadee,64,0.9967,True,Pitangus sulphuratus,0.9967
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-13/Great_Kiskadee/Great_Kiskadee-64-2026-07-13-birdnet-08_50_17.mp3,Great_Kiskadee,64,0.9984,True,Pitangus sulphuratus,0.9984
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-13/Great_Kiskadee/Great_Kiskadee-51-2026-07-13-birdnet-09_02_02.mp3,Great_Kiskadee,51,0.8883,True,Pitangus sulphuratus,0.8883
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-15/Great_Kiskadee/Great_Kiskadee-66-2026-07-15-birdnet-09_21_02.mp3,Great_Kiskadee,66,0.9576,True,Pitangus sulphuratus,0.9576
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-15/Great_Kiskadee/Great_Kiskadee-52-2026-07-15-birdnet-08_32_56.mp3,Great_Kiskadee,52,0.9739,False,Zonotrichia capensis,0.9873
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-15/Great_Kiskadee/Great_Kiskadee-52-2026-07-15-birdnet-10_15_53.mp3,Great_Kiskadee,52,0.9958,True,Pitangus sulphuratus,0.9958
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-15/Great_Kiskadee/Great_Kiskadee-79-2026-07-15-birdnet-08_28_46.mp3,Great_Kiskadee,79,0.996,False,Guira guira,1.0
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-15/Great_Kiskadee/Great_Kiskadee-60-2026-07-15-birdnet-08_31_08.mp3,Great_Kiskadee,60,0.9938,True,Pitangus sulphuratus,0.9938
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-15/Great_Kiskadee/Great_Kiskadee-50-2026-07-15-birdnet-08_30_04.mp3,Great_Kiskadee,50,0.9925,False,Agelaioides badius,0.9979
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-15/Great_Kiskadee/Great_Kiskadee-62-2026-07-15-birdnet-08_29_46.mp3,Great_Kiskadee,62,0.9981,True,Pitangus sulphuratus,0.9981
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-15/Great_Kiskadee/Great_Kiskadee-58-2026-07-15-birdnet-08_29_22.mp3,Great_Kiskadee,58,0.9956,True,Pitangus sulphuratus,0.9956
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-15/Great_Kiskadee/Great_Kiskadee-68-2026-07-15-birdnet-09_43_35.mp3,Great_Kiskadee,68,0.9877,True,Pitangus sulphuratus,0.9877
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-15/Great_Kiskadee/Great_Kiskadee-61-2026-07-15-birdnet-08_28_43.mp3,Great_Kiskadee,61,0.999,True,Pitangus sulphuratus,0.999
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-15/Great_Kiskadee/Great_Kiskadee-52-2026-07-15-birdnet-08_30_49.mp3,Great_Kiskadee,52,0.996,False,Agelaioides badius,0.9965
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-15/Great_Kiskadee/Great_Kiskadee-84-2026-07-15-birdnet-10_15_47.mp3,Great_Kiskadee,84,0.9929,True,Pitangus sulphuratus,0.9929
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-15/Great_Kiskadee/Great_Kiskadee-62-2026-07-15-birdnet-10_15_50.mp3,Great_Kiskadee,62,0.9991,True,Pitangus sulphuratus,0.9991
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-20/Great_Kiskadee/Great_Kiskadee-55-2026-07-20-birdnet-09_59_33.mp3,Great_Kiskadee,55,0.9919,True,Pitangus sulphuratus,0.9919
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-20/Great_Kiskadee/Great_Kiskadee-54-2026-07-20-birdnet-09_43_03.mp3,Great_Kiskadee,54,0.9821,False,Agelaioides badius,0.9925
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-20/Great_Kiskadee/Great_Kiskadee-75-2026-07-20-birdnet-09_51_03.mp3,Great_Kiskadee,75,0.9962,True,Pitangus sulphuratus,0.9962
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-20/Great_Kiskadee/Great_Kiskadee-59-2026-07-20-birdnet-09_58_03.mp3,Great_Kiskadee,59,0.995,True,Pitangus sulphuratus,0.995
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-20/Great_Kiskadee/Great_Kiskadee-72-2026-07-20-birdnet-09_59_00.mp3,Great_Kiskadee,72,0.8796,False,Zonotrichia capensis,0.884
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-20/Great_Kiskadee/Great_Kiskadee-74-2026-07-20-birdnet-09_57_39.mp3,Great_Kiskadee,74,0.9986,True,Pitangus sulphuratus,0.9986
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-20/Great_Kiskadee/Great_Kiskadee-57-2026-07-20-birdnet-09_58_12.mp3,Great_Kiskadee,57,0.9821,True,Pitangus sulphuratus,0.9821
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-20/Great_Kiskadee/Great_Kiskadee-71-2026-07-20-birdnet-09_57_42.mp3,Great_Kiskadee,71,0.9938,False,Guira guira,0.9978
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-20/Great_Kiskadee/Great_Kiskadee-75-2026-07-20-birdnet-09_57_45.mp3,Great_Kiskadee,75,0.9753,True,Pitangus sulphuratus,0.9753
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-20/Great_Kiskadee/Great_Kiskadee-52-2026-07-20-birdnet-09_58_45.mp3,Great_Kiskadee,52,0.9917,True,Pitangus sulphuratus,0.9917
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-20/Great_Kiskadee/Great_Kiskadee-69-2026-07-20-birdnet-09_57_57.mp3,Great_Kiskadee,69,0.9976,True,Pitangus sulphuratus,0.9976
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-22/Great_Kiskadee/Great_Kiskadee-65-2026-07-22-birdnet-14_07_21.mp3,Great_Kiskadee,65,0.9946,True,Pitangus sulphuratus,0.9946
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-22/Great_Kiskadee/Great_Kiskadee-79-2026-07-22-birdnet-14_07_18.mp3,Great_Kiskadee,79,0.9982,True,Pitangus sulphuratus,0.9982
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-22/Great_Kiskadee/Great_Kiskadee-70-2026-07-22-birdnet-14_07_12.mp3,Great_Kiskadee,70,0.9953,True,Pitangus sulphuratus,0.9953
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-22/Great_Kiskadee/Great_Kiskadee-69-2026-07-22-birdnet-14_07_15.mp3,Great_Kiskadee,69,0.9938,True,Pitangus sulphuratus,0.9938
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-25/Great_Kiskadee/Great_Kiskadee-56-2026-07-25-birdnet-13_13_03.mp3,Great_Kiskadee,56,0.9931,True,Pitangus sulphuratus,0.9931
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-25/Great_Kiskadee/Great_Kiskadee-68-2026-07-25-birdnet-16_01_49.mp3,Great_Kiskadee,68,0.9963,True,Pitangus sulphuratus,0.9963
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-08-13/Great_Kiskadee/Great_Kiskadee-83-2026-08-13-birdnet-14_18_15.mp3,Great_Kiskadee,83,0.9707,True,Pitangus sulphuratus_Great Kiskadee,0.9707
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-08-13/Great_Kiskadee/Great_Kiskadee-88-2026-08-13-birdnet-14_18_12.mp3,Great_Kiskadee,88,0.9437,True,Pitangus sulphuratus_Great Kiskadee,0.9437
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-08-15/Great_Kiskadee/Great_Kiskadee-67-2026-08-15-birdnet-08_24_59.mp3,Great_Kiskadee,67,0.7447,False,Furnarius rufus,0.9953
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-08-15/Great_Kiskadee/Great_Kiskadee-51-2026-08-15-birdnet-07_55_46.mp3,Great_Kiskadee,51,0.958,False,Zonotrichia capensis,0.9819
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-08-15/Great_Kiskadee/Great_Kiskadee-57-2026-08-15-birdnet-09_08_23.mp3,Great_Kiskadee,57,0.978,True,Pitangus sulphuratus,0.978
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-08-15/Great_Kiskadee/Great_Kiskadee-61-2026-08-15-birdnet-08_25_08.mp3,Great_Kiskadee,61,0.8813,False,Agelaioides badius,0.9932
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-08-15/Great_Kiskadee/Great_Kiskadee-61-2026-08-15-birdnet-07_53_04.mp3,Great_Kiskadee,61,0.9707,True,Pitangus sulphuratus,0.9707
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-08-15/Great_Kiskadee/Great_Kiskadee-60-2026-08-15-birdnet-07_53_07.mp3,Great_Kiskadee,60,0.974,True,Pitangus sulphuratus,0.974
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-08-16/Great_Kiskadee/Great_Kiskadee-86-2026-08-16-birdnet-07_57_48.mp3,Great_Kiskadee,86,0.9935,True,Pitangus sulphuratus,0.9935
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-08-16/Great_Kiskadee/Great_Kiskadee-71-2026-08-16-birdnet-09_12_33.mp3,Great_Kiskadee,71,0.9415,True,Pitangus sulphuratus,0.9415
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-08-16/Great_Kiskadee/Great_Kiskadee-65-2026-08-16-birdnet-09_28_24.mp3,Great_Kiskadee,65,0.9812,False,Agelaioides badius,0.9866
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-08-16/Great_Kiskadee/Great_Kiskadee-54-2026-08-16-birdnet-08_06_54.mp3,Great_Kiskadee,54,0.8387,True,Pitangus sulphuratus,0.8387
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-08-17/Great_Kiskadee/Great_Kiskadee-63-2026-08-17-birdnet-08_40_51.mp3,Great_Kiskadee,63,0.9349,False,Zonotrichia capensis,0.9913
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-08-17/Great_Kiskadee/Great_Kiskadee-83-2026-08-17-birdnet-09_52_49.mp3,Great_Kiskadee,83,0.9943,True,Pitangus sulphuratus,0.9943
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-08-17/Great_Kiskadee/Great_Kiskadee-78-2026-08-17-birdnet-09_48_40.mp3,Great_Kiskadee,78,0.9828,True,Pitangus sulphuratus,0.9828
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-08-17/Great_Kiskadee/Great_Kiskadee-70-2026-08-17-birdnet-09_52_19.mp3,Great_Kiskadee,70,0.9971,True,Pitangus sulphuratus,0.9971
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-08-17/Great_Kiskadee/Great_Kiskadee-69-2026-08-17-birdnet-09_35_07.mp3,Great_Kiskadee,69,0.9046,True,Pitangus sulphuratus,0.9046
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-08-20/Great_Kiskadee/Great_Kiskadee-75-2026-08-20-birdnet-09_35_08.mp3,Great_Kiskadee,75,0.8539,True,Pitangus sulphuratus,0.8539
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-08-20/Great_Kiskadee/Great_Kiskadee-69-2026-08-20-birdnet-08_36_25.mp3,Great_Kiskadee,69,0.9959,True,Pitangus sulphuratus,0.9959
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-08-21/Great_Kiskadee/Great_Kiskadee-75-2026-08-21-birdnet-08_49_37.mp3,Great_Kiskadee,75,0.9884,True,Pitangus sulphuratus,0.9884
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-08-21/Great_Kiskadee/Great_Kiskadee-61-2026-08-21-birdnet-09_08_35.mp3,Great_Kiskadee,61,0.9806,False,Zonotrichia capensis,0.9992
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-08-21/Great_Kiskadee/Great_Kiskadee-58-2026-08-21-birdnet-09_08_38.mp3,Great_Kiskadee,58,0.9489,True,Pitangus sulphuratus,0.9489
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-08-21/Great_Kiskadee/Great_Kiskadee-50-2026-08-21-birdnet-08_49_34.mp3,Great_Kiskadee,50,0.945,True,Pitangus sulphuratus,0.945
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-08-21/Great_Kiskadee/Great_Kiskadee-70-2026-08-21-birdnet-08_53_10.mp3,Great_Kiskadee,70,0.8719,True,Pitangus sulphuratus,0.8719
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-08-21/Great_Kiskadee/Great_Kiskadee-55-2026-08-21-birdnet-08_40_46.mp3,Great_Kiskadee,55,0.9974,True,Pitangus sulphuratus,0.9974
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-08-21/Great_Kiskadee/Great_Kiskadee-52-2026-08-21-birdnet-08_21_49.mp3,Great_Kiskadee,52,0.8109,True,Pitangus sulphuratus,0.8109
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-04/Guira_Cuckoo/Guira_Cuckoo-79-2026-07-04-birdnet-18_31_25.mp3,Guira_Cuckoo,79,1.0,True,Guira guira,1.0
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-04/Guira_Cuckoo/Guira_Cuckoo-53-2026-07-04-birdnet-18_30_25.mp3,Guira_Cuckoo,53,1.0,True,Guira guira,1.0
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-04/Guira_Cuckoo/Guira_Cuckoo-80-2026-07-04-birdnet-18_31_40.mp3,Guira_Cuckoo,80,0.9994,True,Guira guira,0.9994
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-04/Guira_Cuckoo/Guira_Cuckoo-54-2026-07-04-birdnet-18_31_34.mp3,Guira_Cuckoo,54,1.0,True,Guira guira,1.0
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-04/Guira_Cuckoo/Guira_Cuckoo-50-2026-07-04-birdnet-18_30_46.mp3,Guira_Cuckoo,50,1.0,True,Guira guira,1.0
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-08-16/Guira_Cuckoo/Guira_Cuckoo-55-2026-08-16-birdnet-08_41_27.mp3,Guira_Cuckoo,55,0.9995,True,Guira guira,0.9995
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-08-21/Guira_Cuckoo/Guira_Cuckoo-52-2026-08-21-birdnet-08_12_37.mp3,Guira_Cuckoo,52,0.999,True,Guira guira,0.999
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-04/Masked_Yellowthroat/Masked_Yellowthroat-55-2026-07-04-birdnet-18_28_40.mp3,Masked_Yellowthroat,55,0.9852,True,Geothlypis aequinoctialis_Masked Yellowthroat,0.9852
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-04-20/Monk_Parakeet/Monk_Parakeet-91-2026-04-20-birdnet-12_35_30.mp3,Monk_Parakeet,91,0.6737,True,Myiopsitta monachus_Monk Parakeet,0.6737
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-04-20/Monk_Parakeet/Monk_Parakeet-75-2026-04-20-birdnet-12_35_24.mp3,Monk_Parakeet,75,0.5667,True,Myiopsitta monachus_Monk Parakeet,0.5667
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-04/Osprey/Osprey-50-2026-07-04-birdnet-18_27_22.mp3,Osprey,50,0.0631,False,Turdus amaurochalinus,0.4867
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-14/Osprey/Osprey-50-2026-07-14-birdnet-08_46_41.mp3,Osprey,50,0.9221,True,Pandion haliaetus_Osprey,0.9221
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-04/Picazuro_Pigeon/Picazuro_Pigeon-55-2026-07-04-birdnet-18_25_55.mp3,Picazuro_Pigeon,55,0.745,True,Patagioenas picazuro,0.745
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-05/Picazuro_Pigeon/Picazuro_Pigeon-51-2026-07-05-birdnet-09_21_49.mp3,Picazuro_Pigeon,51,0.8879,True,Patagioenas picazuro,0.8879
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-06/Picazuro_Pigeon/Picazuro_Pigeon-60-2026-07-06-birdnet-10_16_09.mp3,Picazuro_Pigeon,60,0.9272,True,Patagioenas picazuro,0.9272
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-06/Picazuro_Pigeon/Picazuro_Pigeon-67-2026-07-06-birdnet-10_16_12.mp3,Picazuro_Pigeon,67,0.9798,True,Patagioenas picazuro,0.9798
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-06/Picazuro_Pigeon/Picazuro_Pigeon-65-2026-07-06-birdnet-10_18_03.mp3,Picazuro_Pigeon,65,0.98,True,Patagioenas picazuro,0.98
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-06/Picazuro_Pigeon/Picazuro_Pigeon-69-2026-07-06-birdnet-10_18_00.mp3,Picazuro_Pigeon,69,0.9944,True,Patagioenas picazuro,0.9944
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-11/Picazuro_Pigeon/Picazuro_Pigeon-67-2026-07-11-birdnet-08_50_27.mp3,Picazuro_Pigeon,67,0.9786,True,Patagioenas picazuro,0.9786
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-11/Picazuro_Pigeon/Picazuro_Pigeon-60-2026-07-11-birdnet-08_20_28.mp3,Picazuro_Pigeon,60,0.9833,True,Patagioenas picazuro,0.9833
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-11/Picazuro_Pigeon/Picazuro_Pigeon-72-2026-07-11-birdnet-08_28_42.mp3,Picazuro_Pigeon,72,0.9861,True,Patagioenas picazuro,0.9861
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-11/Picazuro_Pigeon/Picazuro_Pigeon-57-2026-07-11-birdnet-08_21_30.mp3,Picazuro_Pigeon,57,0.9445,True,Patagioenas picazuro,0.9445
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-11/Picazuro_Pigeon/Picazuro_Pigeon-71-2026-07-11-birdnet-08_49_39.mp3,Picazuro_Pigeon,71,0.9468,True,Patagioenas picazuro,0.9468
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-11/Picazuro_Pigeon/Picazuro_Pigeon-51-2026-07-11-birdnet-08_53_39.mp3,Picazuro_Pigeon,51,0.915,True,Patagioenas picazuro,0.915
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-11/Picazuro_Pigeon/Picazuro_Pigeon-60-2026-07-11-birdnet-08_49_24.mp3,Picazuro_Pigeon,60,0.9853,True,Patagioenas picazuro,0.9853
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-11/Picazuro_Pigeon/Picazuro_Pigeon-55-2026-07-11-birdnet-09_49_55.mp3,Picazuro_Pigeon,55,0.9457,True,Patagioenas picazuro,0.9457
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-11/Picazuro_Pigeon/Picazuro_Pigeon-79-2026-07-11-birdnet-08_49_18.mp3,Picazuro_Pigeon,79,0.9877,True,Patagioenas picazuro,0.9877
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-11/Picazuro_Pigeon/Picazuro_Pigeon-82-2026-07-11-birdnet-08_49_21.mp3,Picazuro_Pigeon,82,0.9893,True,Patagioenas picazuro,0.9893
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-11/Picazuro_Pigeon/Picazuro_Pigeon-60-2026-07-11-birdnet-08_28_24.mp3,Picazuro_Pigeon,60,0.9728,True,Patagioenas picazuro,0.9728
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-15/Picazuro_Pigeon/Picazuro_Pigeon-56-2026-07-15-birdnet-10_10_56.mp3,Picazuro_Pigeon,56,0.9479,True,Patagioenas picazuro,0.9479
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-15/Picazuro_Pigeon/Picazuro_Pigeon-54-2026-07-15-birdnet-10_12_38.mp3,Picazuro_Pigeon,54,0.963,True,Patagioenas picazuro,0.963
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-22/Picazuro_Pigeon/Picazuro_Pigeon-76-2026-07-22-birdnet-10_26_37.mp3,Picazuro_Pigeon,76,0.9848,True,Patagioenas picazuro,0.9848
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-08-16/Picazuro_Pigeon/Picazuro_Pigeon-55-2026-08-16-birdnet-08_50_06.mp3,Picazuro_Pigeon,55,0.8957,True,Patagioenas picazuro,0.8957
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-08-20/Picazuro_Pigeon/Picazuro_Pigeon-75-2026-08-20-birdnet-08_45_56.mp3,Picazuro_Pigeon,75,0.944,True,Patagioenas picazuro,0.944
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-08-20/Picazuro_Pigeon/Picazuro_Pigeon-52-2026-08-20-birdnet-08_09_52.mp3,Picazuro_Pigeon,52,0.8391,False,Agelaioides badius,0.9727
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-08-20/Picazuro_Pigeon/Picazuro_Pigeon-51-2026-08-20-birdnet-07_59_34.mp3,Picazuro_Pigeon,51,0.953,True,Patagioenas picazuro,0.953
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-08-20/Picazuro_Pigeon/Picazuro_Pigeon-53-2026-08-20-birdnet-07_54_52.mp3,Picazuro_Pigeon,53,0.9215,False,Agelaioides badius,0.9765
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-08-20/Picazuro_Pigeon/Picazuro_Pigeon-60-2026-08-20-birdnet-08_01_37.mp3,Picazuro_Pigeon,60,0.9282,True,Patagioenas picazuro,0.9282
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-04-13/Plush-crested_Jay/Plush-crested_Jay-72-2026-04-13-birdnet-16_54_56.mp3,Plush-crested_Jay,72,0.87,True,Cyanocorax chrysops_Plush-crested Jay,0.87
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-04-13/Plush-crested_Jay/Plush-crested_Jay-77-2026-04-13-birdnet-16_55_05.mp3,Plush-crested_Jay,77,0.7926,True,Cyanocorax chrysops_Plush-crested Jay,0.7926
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-04-13/Plush-crested_Jay/Plush-crested_Jay-84-2026-04-13-birdnet-16_54_53.mp3,Plush-crested_Jay,84,0.8865,True,Cyanocorax chrysops_Plush-crested Jay,0.8865
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2000-01-01/Roadside_Hawk/Roadside_Hawk-90-2000-01-01-birdnet-01_07_07.mp3,Roadside_Hawk,90,0.9486,True,Rupornis magnirostris_Roadside Hawk,0.9486
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2000-01-01/Roadside_Hawk/Roadside_Hawk-82-2000-01-01-birdnet-01_07_04.mp3,Roadside_Hawk,82,0.8948,True,Rupornis magnirostris_Roadside Hawk,0.8948
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-04-20/Roadside_Hawk/Roadside_Hawk-70-2026-04-20-birdnet-12_41_58.mp3,Roadside_Hawk,70,0.9499,True,Rupornis magnirostris_Roadside Hawk,0.9499
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-04-20/Roadside_Hawk/Roadside_Hawk-85-2026-04-20-birdnet-12_41_55.mp3,Roadside_Hawk,85,0.9239,True,Rupornis magnirostris_Roadside Hawk,0.9239
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-04-20/Roadside_Hawk/Roadside_Hawk-87-2026-04-20-birdnet-12_42_01.mp3,Roadside_Hawk,87,0.9392,True,Rupornis magnirostris_Roadside Hawk,0.9392
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-04-20/Roadside_Hawk/Roadside_Hawk-92-2026-04-20-birdnet-12_42_04.mp3,Roadside_Hawk,92,0.9829,True,Rupornis magnirostris_Roadside Hawk,0.9829
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-06-22/Rufous-collared_Sparrow/Rufous-collared_Sparrow-67-2026-06-22-birdnet-12_39_35.mp3,Rufous-collared_Sparrow,67,0.982,True,Zonotrichia capensis,0.982
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-06-22/Rufous-collared_Sparrow/Rufous-collared_Sparrow-64-2026-06-22-birdnet-12_39_44.mp3,Rufous-collared_Sparrow,64,0.697,True,Zonotrichia capensis,0.697
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-06-22/Rufous-collared_Sparrow/Rufous-collared_Sparrow-67-2026-06-22-birdnet-12_39_38.mp3,Rufous-collared_Sparrow,67,0.9634,True,Zonotrichia capensis,0.9634
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-06-22/Rufous-collared_Sparrow/Rufous-collared_Sparrow-63-2026-06-22-birdnet-12_39_41.mp3,Rufous-collared_Sparrow,63,0.9921,True,Zonotrichia capensis,0.9921
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-06-22/Rufous-collared_Sparrow/Rufous-collared_Sparrow-51-2026-06-22-birdnet-12_39_32.mp3,Rufous-collared_Sparrow,51,0.9207,True,Zonotrichia capensis,0.9207
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-12/Rufous-collared_Sparrow/Rufous-collared_Sparrow-62-2026-07-12-birdnet-08_35_08.mp3,Rufous-collared_Sparrow,62,0.9929,True,Zonotrichia capensis,0.9929
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-12/Rufous-collared_Sparrow/Rufous-collared_Sparrow-58-2026-07-12-birdnet-08_36_11.mp3,Rufous-collared_Sparrow,58,0.9984,True,Zonotrichia capensis,0.9984
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-22/Rufous-collared_Sparrow/Rufous-collared_Sparrow-63-2026-07-22-birdnet-14_00_33.mp3,Rufous-collared_Sparrow,63,0.963,True,Zonotrichia capensis,0.963
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-25/Rufous-collared_Sparrow/Rufous-collared_Sparrow-52-2026-07-25-birdnet-08_12_10.mp3,Rufous-collared_Sparrow,52,0.9996,True,Zonotrichia capensis,0.9996
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-25/Rufous-collared_Sparrow/Rufous-collared_Sparrow-52-2026-07-25-birdnet-08_12_43.mp3,Rufous-collared_Sparrow,52,0.9998,True,Zonotrichia capensis,0.9998
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-08-15/Rufous-collared_Sparrow/Rufous-collared_Sparrow-53-2026-08-15-birdnet-08_19_05.mp3,Rufous-collared_Sparrow,53,0.9995,True,Zonotrichia capensis,0.9995
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-08-16/Rufous-collared_Sparrow/Rufous-collared_Sparrow-53-2026-08-16-birdnet-08_18_24.mp3,Rufous-collared_Sparrow,53,0.9935,True,Zonotrichia capensis,0.9935
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-08-18/Rufous-collared_Sparrow/Rufous-collared_Sparrow-50-2026-08-18-birdnet-08_16_43.mp3,Rufous-collared_Sparrow,50,0.9996,True,Zonotrichia capensis,0.9996
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-08-18/Rufous-collared_Sparrow/Rufous-collared_Sparrow-56-2026-08-18-birdnet-08_38_25.mp3,Rufous-collared_Sparrow,56,0.9993,True,Zonotrichia capensis,0.9993
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-08-18/Rufous-collared_Sparrow/Rufous-collared_Sparrow-54-2026-08-18-birdnet-08_28_37.mp3,Rufous-collared_Sparrow,54,0.9946,True,Zonotrichia capensis,0.9946
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-08-19/Rufous-collared_Sparrow/Rufous-collared_Sparrow-63-2026-08-19-birdnet-08_11_46.mp3,Rufous-collared_Sparrow,63,0.9918,True,Zonotrichia capensis,0.9918
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-08-19/Rufous-collared_Sparrow/Rufous-collared_Sparrow-56-2026-08-19-birdnet-08_12_40.mp3,Rufous-collared_Sparrow,56,0.9986,True,Zonotrichia capensis,0.9986
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-08-19/Rufous-collared_Sparrow/Rufous-collared_Sparrow-51-2026-08-19-birdnet-08_11_22.mp3,Rufous-collared_Sparrow,51,0.9985,True,Zonotrichia capensis,0.9985
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-08-20/Rufous-collared_Sparrow/Rufous-collared_Sparrow-51-2026-08-20-birdnet-08_03_55.mp3,Rufous-collared_Sparrow,51,0.9923,True,Zonotrichia capensis,0.9923
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-08-20/Rufous-collared_Sparrow/Rufous-collared_Sparrow-57-2026-08-20-birdnet-08_03_25.mp3,Rufous-collared_Sparrow,57,0.994,True,Zonotrichia capensis,0.994
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-08-20/Rufous-collared_Sparrow/Rufous-collared_Sparrow-53-2026-08-20-birdnet-08_05_34.mp3,Rufous-collared_Sparrow,53,0.9914,True,Zonotrichia capensis,0.9914
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-08-20/Rufous-collared_Sparrow/Rufous-collared_Sparrow-51-2026-08-20-birdnet-19_07_19.mp3,Rufous-collared_Sparrow,51,0.83,True,Zonotrichia capensis,0.83
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-08-21/Rufous-collared_Sparrow/Rufous-collared_Sparrow-65-2026-08-21-birdnet-07_54_25.mp3,Rufous-collared_Sparrow,65,0.9996,True,Zonotrichia capensis,0.9996
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-08-21/Rufous-collared_Sparrow/Rufous-collared_Sparrow-67-2026-08-21-birdnet-07_54_13.mp3,Rufous-collared_Sparrow,67,0.9967,True,Zonotrichia capensis,0.9967
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-08-21/Rufous-collared_Sparrow/Rufous-collared_Sparrow-70-2026-08-21-birdnet-09_32_41.mp3,Rufous-collared_Sparrow,70,0.9996,True,Zonotrichia capensis,0.9996
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-08-21/Rufous-collared_Sparrow/Rufous-collared_Sparrow-62-2026-08-21-birdnet-08_39_55.mp3,Rufous-collared_Sparrow,62,0.9971,True,Zonotrichia capensis,0.9971
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-06-22/Rufous_Hornero/Rufous_Hornero-71-2026-06-22-birdnet-12_36_56.mp3,Rufous_Hornero,71,0.945,True,Furnarius rufus,0.945
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-06-22/Rufous_Hornero/Rufous_Hornero-58-2026-06-22-birdnet-12_36_53.mp3,Rufous_Hornero,58,0.8461,True,Furnarius rufus,0.8461
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-12/Rufous_Hornero/Rufous_Hornero-54-2026-07-12-birdnet-09_37_32.mp3,Rufous_Hornero,54,0.9661,True,Furnarius rufus,0.9661
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-13/Rufous_Hornero/Rufous_Hornero-55-2026-07-13-birdnet-09_01_47.mp3,Rufous_Hornero,55,0.9968,True,Furnarius rufus,0.9968
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-22/Rufous_Hornero/Rufous_Hornero-57-2026-07-22-birdnet-09_15_28.mp3,Rufous_Hornero,57,0.9986,True,Furnarius rufus,0.9986
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-08-13/Rufous_Hornero/Rufous_Hornero-69-2026-08-13-birdnet-18_26_30.mp3,Rufous_Hornero,69,0.933,True,Furnarius rufus_Rufous Hornero,0.933
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-08-15/Rufous_Hornero/Rufous_Hornero-50-2026-08-15-birdnet-18_25_33.mp3,Rufous_Hornero,50,0.9863,True,Furnarius rufus,0.9863
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-08-15/Rufous_Hornero/Rufous_Hornero-50-2026-08-15-birdnet-08_12_59.mp3,Rufous_Hornero,50,0.991,True,Furnarius rufus,0.991
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-08-17/Rufous_Hornero/Rufous_Hornero-76-2026-08-17-birdnet-08_25_45.mp3,Rufous_Hornero,76,0.996,True,Furnarius rufus,0.996
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-08-18/Rufous_Hornero/Rufous_Hornero-55-2026-08-18-birdnet-08_49_13.mp3,Rufous_Hornero,55,0.9906,True,Furnarius rufus,0.9906
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-08-19/Rufous_Hornero/Rufous_Hornero-60-2026-08-19-birdnet-07_53_55.mp3,Rufous_Hornero,60,0.9991,True,Furnarius rufus,0.9991
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-08-19/Rufous_Hornero/Rufous_Hornero-64-2026-08-19-birdnet-08_01_58.mp3,Rufous_Hornero,64,0.9994,True,Furnarius rufus,0.9994
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-08-21/Rufous_Hornero/Rufous_Hornero-65-2026-08-21-birdnet-08_47_16.mp3,Rufous_Hornero,65,0.9964,True,Furnarius rufus,0.9964
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-08-21/Rufous_Hornero/Rufous_Hornero-63-2026-08-21-birdnet-09_03_56.mp3,Rufous_Hornero,63,0.9977,True,Furnarius rufus,0.9977
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-09/Saffron_Finch/Saffron_Finch-55-2026-07-09-birdnet-10_01_59.mp3,Saffron_Finch,55,0.9925,True,Sicalis flaveola,0.9925
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-09/Saffron_Finch/Saffron_Finch-64-2026-07-09-birdnet-10_02_02.mp3,Saffron_Finch,64,0.9545,True,Sicalis flaveola,0.9545
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-09/Saffron_Finch/Saffron_Finch-62-2026-07-09-birdnet-10_00_11.mp3,Saffron_Finch,62,0.8541,False,Zonotrichia capensis,0.9915
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-09/Saffron_Finch/Saffron_Finch-62-2026-07-09-birdnet-10_00_44.mp3,Saffron_Finch,62,0.7369,False,Zonotrichia capensis,0.923
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-09/Saffron_Finch/Saffron_Finch-62-2026-07-09-birdnet-10_01_47.mp3,Saffron_Finch,62,0.6369,False,Zonotrichia capensis,0.9379
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-09/Saffron_Finch/Saffron_Finch-54-2026-07-09-birdnet-10_01_50.mp3,Saffron_Finch,54,0.8822,True,Sicalis flaveola,0.8822
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-12/Saffron_Finch/Saffron_Finch-52-2026-07-12-birdnet-09_19_50.mp3,Saffron_Finch,52,0.8311,False,Zonotrichia capensis,0.9989
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-25/Solitary_Sandpiper/Solitary_Sandpiper-58-2026-07-25-birdnet-13_13_42.mp3,Solitary_Sandpiper,58,0.2295,False,Zonotrichia capensis,0.963
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-25/Solitary_Sandpiper/Solitary_Sandpiper-68-2026-07-25-birdnet-17_08_18.mp3,Solitary_Sandpiper,68,0.5141,False,Zonotrichia capensis,0.9867
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-08-15/Solitary_Sandpiper/Solitary_Sandpiper-54-2026-08-15-birdnet-08_26_17.mp3,Solitary_Sandpiper,54,0.1025,False,Zonotrichia capensis,0.9112
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-06-22/Southern_Lapwing/Southern_Lapwing-66-2026-06-22-birdnet-12_38_14.mp3,Southern_Lapwing,66,0.8354,True,Vanellus chilensis_Southern Lapwing,0.8354
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-22/Southern_Lapwing/Southern_Lapwing-58-2026-07-22-birdnet-09_38_34.mp3,Southern_Lapwing,58,0.8133,False,Agelaioides badius,0.9383
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-08-15/Southern_Lapwing/Southern_Lapwing-53-2026-08-15-birdnet-08_42_32.mp3,Southern_Lapwing,53,0.9674,True,Vanellus chilensis,0.9674
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-08-16/Southern_Lapwing/Southern_Lapwing-55-2026-08-16-birdnet-09_12_09.mp3,Southern_Lapwing,55,0.6435,False,Guira guira,0.8575
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-04/Tropical_Parula/Tropical_Parula-57-2026-07-04-birdnet-18_28_19.mp3,Tropical_Parula,57,0.8621,True,Setophaga pitiayumi,0.8621
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-04/Tropical_Parula/Tropical_Parula-61-2026-07-04-birdnet-18_28_07.mp3,Tropical_Parula,61,0.7149,True,Setophaga pitiayumi_Tropical Parula,0.7149
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-07-15/Yellow-chinned_Spinetail/Yellow-chinned_Spinetail-50-2026-07-15-birdnet-09_55_08.mp3,Yellow-chinned_Spinetail,50,0.9133,False,Guira guira,0.9999
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-08-15/Yellow-chinned_Spinetail/Yellow-chinned_Spinetail-50-2026-08-15-birdnet-08_08_56.mp3,Yellow-chinned_Spinetail,50,0.8795,False,Guira guira,0.9441
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-08-16/Yellow-chinned_Spinetail/Yellow-chinned_Spinetail-67-2026-08-16-birdnet-08_43_39.mp3,Yellow-chinned_Spinetail,67,0.9603,False,Guira guira,0.9631
+/home/diego/Desktop/Tector/BirdNET_Detecciones/2026-08-20/Yellow-chinned_Spinetail/Yellow-chinned_Spinetail-67-2026-08-20-birdnet-09_42_38.mp3,Yellow-chinned_Spinetail,67,0.4456,False,Zonotrichia capensis,0.9443

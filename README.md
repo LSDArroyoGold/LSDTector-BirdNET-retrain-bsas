@@ -1,5 +1,21 @@
 # LSDTector: clasificador BirdNET v2
 
+> ⛔ **Validación independiente (21-22/8): v10 NO se instala en tector2
+> todavía.** Se probó a fondo con audio real ajeno al entrenamiento
+> (campo + Xeno-canto vía API), incluida verificación manual con Merlin.
+> Confirma la mejora en Hornero/Kestrel, pero encontró que 3 de las 14
+> neuronas reentrenadas (Chingolo, Pirincho, Tordo músico) generan
+> detecciones falsas espurias sobre otras especies (sobre todo Kiskadee) —
+> diagnosticado como un atajo de aprendizaje: esas neuronas parecen haber
+> aprendido a reconocer el micrófono/sitio de tector1 en vez del canto real,
+> porque se entrenaron solo con positivos de ese único dispositivo. No es
+> un problema de calibración (se probó subir el umbral por especie y no
+> alcanza para separar Chingolo). El fix es de datos de entrenamiento, no
+> de umbral. Por ahora se sigue en producción con el modelo original +
+> filtro de geolocalización + fix de ancho de banda. Ver
+> [`INFORME_VALIDACION_INDEPENDIENTE_V10.md`](INFORME_VALIDACION_INDEPENDIENTE_V10.md)
+> para el detalle completo, scripts y resultados.
+>
 > ✅ **Colapso de sensibilidad en audio real de campo, corregido y
 > validado (22/8).** El problema no era solo Hornero/Kestrel: al
 > extender el chequeo a más especies con volumen suficiente de
